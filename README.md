@@ -2,7 +2,7 @@
 
 PyTorch implementation of CABLE for continual reinforcement learning on **CW10** and **CW3**.
 
-CABLE combines successful-state memory, best-teacher relabeling, and SAC-priority gradient projection to coordinate new-task learning with historical behavior preservation.
+CABLE combines successful-state memory, best-teacher relabeling, and SAC-priority gradient projection to coordinate new-task SAC learning with old-task BC regularization.
 
 ## Installation
 
