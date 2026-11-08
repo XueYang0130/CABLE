@@ -1,12 +1,14 @@
 # Release validation
 
-Validated on 8 November 2026 before publication:
+The reader workflow was checked using a fresh clone of the public repository and a new Python 3.11 virtual environment on macOS.
 
-- 134 tests passed.
+- Installation from `requirements.txt` succeeded; `pip check` reported no dependency conflicts.
+- 137 tests passed, including gradient coordination, reference memory, baseline behavior, and entry-point checks.
 - All 175 archived configurations parsed successfully.
-- Average performance and forgetting matched the previously audited values for every result group.
-- Two-task, 400-step environment smoke run completed, including SAC updates and evaluations. This short run did not produce successful-episode BC memory; reservoir, relabeling, and gradient-coordination behavior are covered by the tests.
-- Learning curves regenerated from the included evaluation records.
-- No local absolute paths, Chinese text, or credential-shaped strings were found in release source/configuration/evidence files.
+- Average performance and forgetting were recomputed from the included evaluation records and matched the archived aggregate results exactly.
+- The learning-curve plotting command generated PDF and PNG outputs.
+- Short training and evaluation runs completed for CABLE, fine-tuning, ClonEx-SAC, RECALL, PackNet, a CW3 sequence, and a single-task batch. These reduced-budget checks do not establish full-budget performance.
 
-This validates the packaged implementation and result processing, not a fresh full retraining of every reported experiment. JSON configuration loading explicitly uses the JSON parser to preserve scientific-notation numeric types.
+Reader-facing fixes include seed-specific output names, configuration-path handling, a standalone reference-aggregation entry point, and method defaults matching the paper configurations. The `--smoke` option uses a reduced budget to check execution; it does not reproduce paper performance.
+
+CPU execution was checked. CUDA, MPS, Windows, and Linux have not been independently validated by this check. Full-budget experiments were not rerun as part of release validation.

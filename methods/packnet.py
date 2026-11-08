@@ -24,8 +24,8 @@ METHOD = MethodSpec(
     hide_task_id=True,
     reference_exploration=True,
     defaults={
-        "packnet_retrain_steps": 0,
-        "gradient_clip_norm": 0.1,
+        "packnet_retrain_steps": 100_000,
+        "gradient_clip_norm": 2e-5,
     },
     agent_factory=build_agent,
 )

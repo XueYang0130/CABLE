@@ -18,7 +18,7 @@ METHOD = MethodSpec(
         "episodic_batch_size": 128,
         "actor_cloning_coefficient": 100.0,
         "bc_gradient_strategy": "pcgrad_sac_priority",
-        "bc_max_norm_ratio": 1.0,
+        "bc_max_norm_ratio": 1_000_000.0,
         "bc_combination_strategy": "average",
         "gradient_clip_norm": 0.1,
         "gradient_diagnostics": True,

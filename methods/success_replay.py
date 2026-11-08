@@ -50,7 +50,7 @@ def make_success_replay_method(
         "episodic_batch_size": 128,
         "actor_cloning_coefficient": 100.0,
         "bc_gradient_strategy": gradient_strategy,
-        "bc_max_norm_ratio": 1.0,
+        "bc_max_norm_ratio": 1_000_000.0,
         "bc_combination_strategy": "average",
         "bc_adaptive_target_ratio": 0.2,
         "bc_adaptive_conflict_ratio": 0.05,

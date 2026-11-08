@@ -22,7 +22,7 @@ pip install -r requirements.txt
 python scripts/train.py --config configs/cable_cw10.json --seed 1 --device cpu
 ```
 
-Evaluation runs automatically during training. Outputs are saved to `outputs/`.
+Evaluation runs automatically during training. Outputs are saved to `outputs/`; changing `--seed` selects a separate run directory. Add `--smoke` for a short installation check.
 
 | Method | Configuration |
 |---|---|
