@@ -1,0 +1,986 @@
+from __future__ import annotations
+
+import argparse
+import csv
+import json
+import math
+import os
+import subprocess
+import sys
+import time
+from datetime import datetime, timezone
+from pathlib import Path
+
+import yaml
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+SRC_DIR = PROJECT_ROOT / "src"
+if str(SRC_DIR) not in sys.path:
+    sys.path.insert(0, str(SRC_DIR))
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from envs import CONTINUAL_TASK_SEQUENCE_NAMES, DEFAULT_EPISODE_LENGTH, get_cw10_tasks
+from evaluation import aggregate_single_task_baselines
+from methods import (
+    available_method_ids,
+    bc_gradient_strategy_for_method,
+    default_method_for_mode,
+    get_method,
+    is_method_compatible,
+    method_defaults,
+    required_bc_combination_strategy,
+)
+from training import run_cw10_experiment, run_single_task_experiment
+from training.segment_selection import normalize_segment_weights
+from utils import write_json
+
+
+def load_config(path: str | Path) -> dict[str, object]:
+    config_path = Path(path).expanduser().resolve()
+    with config_path.open("r", encoding="utf-8") as file:
+        payload = json.load(file) if config_path.suffix == ".json" else yaml.safe_load(file)
+    if payload is None:
+        return {}
+    if not isinstance(payload, dict):
+        raise ValueError(f"Config file must contain a mapping: {config_path}")
+    return dict(payload)
+
+
+def load_dotenv_values(path: str | Path) -> dict[str, str]:
+    dotenv_path = Path(path).expanduser().resolve()
+    if not dotenv_path.exists():
+        return {}
+    values: dict[str, str] = {}
+    for raw_line in dotenv_path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key:
+            values[key] = value
+    return values
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--config", type=str, default=None)
+    parser.add_argument("--mode", choices=("single", "single-batch", "continual"), default=None)
+    parser.add_argument("--method", type=str, default=None)
+    parser.add_argument("--task", type=str, default="hammer-v3")
+    parser.add_argument("--env-version", choices=("v2", "v3"), default="v3")
+    parser.add_argument(
+        "--reward-function-version",
+        choices=("v1", "v2", "v1_compatible", "cw10_v1"),
+        default="v2",
+    )
+    parser.add_argument("--steps-per-task", type=int, default=1_000_000)
+    parser.add_argument("--total-steps", type=int, default=None)
+    parser.add_argument("--sequence-task-count", type=int, default=10)
+    parser.add_argument(
+        "--task-sequence",
+        choices=CONTINUAL_TASK_SEQUENCE_NAMES,
+        default="cw10",
+        help="Named continual sequence; cw3_0..cw3_7 and cw6_0..cw6_7 match RECALL.",
+    )
+    parser.add_argument("--num-tasks", type=int, default=10)
+    parser.add_argument("--eval-every", type=int, default=20_000)
+    parser.add_argument("--det-eval-episodes", type=int, default=1)
+    parser.add_argument("--stoch-eval-episodes", type=int, default=10)
+    parser.add_argument("--best-return-eval-episodes", type=int, default=2)
+    parser.add_argument("--replay-size", type=int, default=1_000_000)
+    parser.add_argument("--batch-size", type=int, default=128)
+    parser.add_argument("--critic-ensemble-size", type=int, default=2)
+    parser.add_argument("--critic-bootstrap-probability", type=float, default=0.8)
+    parser.add_argument("--optimistic-ucb-beta", type=float, default=0.0)
+    parser.add_argument("--optimistic-action-candidates", type=int, default=1)
+    parser.add_argument("--n-step-return", type=int, default=1)
+    parser.add_argument("--prioritized-replay-fraction", type=float, default=0.0)
+    parser.add_argument("--priority-alpha", type=float, default=0.6)
+    parser.add_argument("--priority-beta-start", type=float, default=0.4)
+    parser.add_argument("--priority-beta-end", type=float, default=1.0)
+    parser.add_argument(
+        "--priority-beta-steps",
+        type=int,
+        default=0,
+        help="PER beta annealing steps; zero uses --steps-per-task.",
+    )
+    parser.add_argument("--priority-epsilon", type=float, default=1e-6)
+    parser.add_argument("--start-steps", type=int, default=10_000)
+    parser.add_argument("--update-after", type=int, default=1_000)
+    parser.add_argument("--update-every", type=int, default=50)
+    parser.add_argument("--learning-rate", type=float, default=1e-3)
+    parser.add_argument("--gamma", type=float, default=0.99)
+    parser.add_argument("--polyak", type=float, default=0.995)
+    parser.add_argument("--target-output-std", type=float, default=0.089)
+    parser.add_argument("--initial-log-alpha", type=float, default=1.0)
+    parser.add_argument("--max-episode-steps", type=int, default=DEFAULT_EPISODE_LENGTH)
+    parser.add_argument("--exploration-strategy", type=str, default="random")
+    parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--device", type=str, default="cpu")
+    parser.add_argument("--reset-buffer-on-task-change", action=argparse.BooleanOptionalAction, default=True)
+    parser.add_argument("--reset-optimizer-on-task-change", action=argparse.BooleanOptionalAction, default=True)
+    parser.add_argument("--reset-critic-on-task-change", action=argparse.BooleanOptionalAction, default=False)
+    parser.add_argument(
+        "--critic-reset-task-indices",
+        type=int,
+        nargs="*",
+        default=None,
+        help=(
+            "Optional task indices that should reset critics at task start. "
+            "If provided, only these tasks reset and all other tasks keep transferred critics."
+        ),
+    )
+    parser.add_argument("--adaptive-critic-init", action=argparse.BooleanOptionalAction, default=False)
+    parser.add_argument("--critic-probe-transitions", type=int, default=5000)
+    parser.add_argument("--critic-warmup-updates", type=int, default=500)
+    parser.add_argument("--critic-route-manifest", type=str, default=None)
+    parser.add_argument("--critic-head-hidden-size", type=int, default=64)
+    parser.add_argument("--baseline-curves", type=str, default=None)
+    parser.add_argument("--cl-reg-coef", type=float, default=1_000.0)
+    parser.add_argument("--fisher-batches", type=int, default=10)
+    parser.add_argument("--packnet-retrain-steps", type=int, default=0)
+    parser.add_argument("--ssde-dormancy-threshold", type=float, default=0.01)
+    parser.add_argument("--ssde-dormancy-check-every", type=int, default=10_000)
+    parser.add_argument("--ssde-retrain-steps", type=int, default=0)
+    parser.add_argument("--ssde-hidden-size", type=int, default=1024)
+    parser.add_argument("--ssde-descriptor-dim", type=int, default=384)
+    parser.add_argument("--ssde-fixed-lasso-alpha", type=float, default=0.01)
+    parser.add_argument("--ssde-random-lasso-alpha-start", type=float, default=0.01)
+    parser.add_argument("--ssde-random-lasso-alpha-end", type=float, default=0.0001)
+    parser.add_argument("--ssde-default-beta", type=float, default=0.3)
+    parser.add_argument(
+        "--ssde-adaptive-beta",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+    )
+    parser.add_argument("--ssde-beta-lambda", type=float, default=0.5)
+    parser.add_argument("--ssde-sensitivity-interval", type=int, default=80_000)
+    parser.add_argument("--ssde-sensitivity-batch-size", type=int, default=1_000)
+    parser.add_argument("--ssde-sensitivity-threshold", type=float, default=0.6)
+    parser.add_argument("--ssde-stop-reset-after-steps", type=int, default=650_000)
+    parser.add_argument("--ssde-target-entropy", type=float, default=-2.0)
+    parser.add_argument(
+        "--ssde-random-distillation",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
+    parser.add_argument("--ssde-distillation-steps", type=int, default=20_000)
+    parser.add_argument("--episodic-memory-per-task", type=int, default=0)
+    parser.add_argument("--episodic-batch-size", type=int, default=0)
+    parser.add_argument("--actor-cloning-coefficient", type=float, default=0.0)
+    parser.add_argument("--recall-value-reg-coef", type=float, default=1.0)
+    parser.add_argument(
+        "--recall-regularize-critic",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+    )
+    parser.add_argument(
+        "--bc-gradient-strategy",
+        choices=("standard", "norm_balanced", "pcgrad_sac_priority"),
+        default="standard",
+    )
+    parser.add_argument("--bc-max-norm-ratio", type=float, default=1.0)
+    parser.add_argument(
+        "--bc-combination-strategy",
+        choices=("average", "additive", "adaptive_additive", "cagrad"),
+        default="average",
+    )
+    parser.add_argument("--bc-adaptive-target-ratio", type=float, default=0.2)
+    parser.add_argument("--bc-adaptive-conflict-ratio", type=float, default=0.05)
+    parser.add_argument("--bc-cagrad-alpha", type=float, default=0.5)
+    parser.add_argument("--kl-budget-low", type=float, default=0.05)
+    parser.add_argument("--kl-budget-high", type=float, default=0.5)
+    parser.add_argument("--kl-budget-ema-beta", type=float, default=0.99)
+    parser.add_argument("--conflict-lora-rank", type=int, default=4)
+    parser.add_argument("--conflict-lora-coefficient", type=float, default=1.0)
+    parser.add_argument("--conflict-lora-max-norm-ratio", type=float, default=0.25)
+    parser.add_argument(
+        "--bc-progress-gate",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+    )
+    parser.add_argument(
+        "--bc-progress-thresholds",
+        nargs=3,
+        type=float,
+        default=(0.1, 0.4, 0.7),
+        metavar=("LOW", "MID", "HIGH"),
+    )
+    parser.add_argument(
+        "--bc-progress-multipliers",
+        nargs=4,
+        type=float,
+        default=(0.0, 0.1, 0.4, 1.0),
+        metavar=("EARLY", "LOW", "MID", "HIGH"),
+    )
+    parser.add_argument("--bc-progress-window", type=int, default=3)
+    parser.add_argument(
+        "--llm-task-bc-schedule",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+    )
+    parser.add_argument(
+        "--llm-bc-schedule-prompt-dir",
+        type=str,
+        default="prompts/llm_bc_schedule",
+    )
+    parser.add_argument("--llm-prior-prompt-dir", type=str, default="prompts/llm_policy_prior")
+    parser.add_argument("--llm-prior-min-confidence", type=float, default=0.7)
+    parser.add_argument("--implicit-prior-reset-states", type=int, default=256)
+    parser.add_argument("--implicit-prior-updates", type=int, default=500)
+    parser.add_argument("--implicit-prior-learning-rate", type=float, default=1e-3)
+    parser.add_argument("--full-bc-reference-episodes", type=int, default=20)
+    parser.add_argument("--full-bc-reference-max-attempts", type=int, default=80)
+    parser.add_argument("--semantic-segments", nargs="+", default=None)
+    parser.add_argument(
+        "--semantic-segment-weights",
+        nargs="+",
+        default=None,
+        metavar="SEGMENT=WEIGHT",
+    )
+    parser.add_argument(
+        "--semantic-segment-scheme",
+        choices=("heuristic_v1", "task_aware_v2", "task_aware_v3"),
+        default="heuristic_v1",
+    )
+    parser.add_argument("--semantic-post-success-steps", type=int, default=10)
+    parser.add_argument("--background-segment-ratio", type=float, default=0.0)
+    parser.add_argument("--task-specific-segment-ratio", type=float, default=0.0)
+    parser.add_argument(
+        "--segment-selection-mode",
+        choices=("fixed", "task_adaptive", "llm_online"),
+        default="fixed",
+    )
+    parser.add_argument("--segment-selection-manifest", type=str, default=None)
+    parser.add_argument("--task-specific-segment-manifest", type=str, default=None)
+    parser.add_argument("--llm-controller-model", type=str, default="gpt-5")
+    parser.add_argument("--llm-controller-api-key-env", type=str, default="OPENAI_API_KEY")
+    parser.add_argument("--llm-controller-update-every-evals", type=int, default=1)
+    parser.add_argument("--llm-controller-max-output-tokens", type=int, default=400)
+    parser.add_argument(
+        "--llm-controller-prompt-dir",
+        type=str,
+        default="prompts/llm_controller",
+    )
+    parser.add_argument(
+        "--llm-broader-replay-prompt-dir",
+        type=str,
+        default="prompts/llm_broader_replay",
+    )
+    parser.add_argument("--gradient-clip-norm", type=float, default=None)
+    parser.add_argument(
+        "--gradient-diagnostics",
+        action=argparse.BooleanOptionalAction,
+        default=False,
+    )
+    parser.add_argument("--gradient-diagnostics-interval", type=int, default=500)
+    parser.add_argument(
+        "--gradient-diagnostics-source-batch-size",
+        type=int,
+        default=128,
+    )
+    parser.add_argument("--wsrl-backbone-source", choices=("current", "best_return"), default="current")
+    parser.add_argument("--wsrl-head-source", choices=("reset", "current", "best_return"), default="reset")
+    parser.add_argument("--wsrl-warmup-steps", type=int, default=10_000)
+    parser.add_argument("--jsrl-initial-guide-steps", type=int, default=180)
+    parser.add_argument("--jsrl-curriculum-stages", type=int, default=10)
+    parser.add_argument("--jsrl-evaluation-interval", type=int, default=20_000)
+    parser.add_argument("--jsrl-moving-average-window", type=int, default=5)
+    parser.add_argument("--jsrl-stage-tolerance", type=float, default=0.10)
+    parser.add_argument("--jsrl-min-evaluations-per-stage", type=int, default=1)
+    parser.add_argument("--jsrl-max-evaluations-without-advance", type=int, default=5)
+    parser.add_argument("--dg-min-guide-improvement", type=float, default=0.0)
+    parser.add_argument("--aggregate-tail-size", type=int, default=5)
+    parser.add_argument("--tail-size", type=int, default=5)
+    parser.add_argument("--output-dir", type=str, default=None)
+    parser.add_argument("--run-name", type=str, default=None)
+    args = parser.parse_args()
+    explicit_destinations = {
+        action.dest
+        for action in parser._actions
+        if any(
+            argument == option or argument.startswith(f"{option}=")
+            for argument in sys.argv[1:]
+            for option in action.option_strings
+        )
+    }
+    dotenv_values = load_dotenv_values(PROJECT_ROOT / ".env")
+    env_model = (
+        os.environ.get("OPENAI_MODEL", "").strip()
+        or dotenv_values.get("OPENAI_MODEL", "").strip()
+    )
+    if env_model and "llm_controller_model" not in explicit_destinations:
+        args.llm_controller_model = env_model
+
+    if args.config is not None:
+        config = load_config(args.config)
+        unknown_keys = [key for key in config if not hasattr(args, key)]
+        if unknown_keys:
+            parser.error(f"Unknown config keys: {', '.join(sorted(unknown_keys))}")
+        for key, value in config.items():
+            if key not in explicit_destinations:
+                setattr(args, key, value)
+
+    if args.mode is None:
+        parser.error("--mode is required unless provided by --config.")
+    if args.method is None:
+        args.method = default_method_for_mode(args.mode)
+    if args.method not in available_method_ids():
+        parser.error(f"Unsupported method '{args.method}'. Available methods: {', '.join(available_method_ids())}")
+    configured_keys = set(config) if args.config is not None else set()
+    supplied_keys = explicit_destinations | configured_keys
+    if args.mode == "continual" and "num_tasks" in supplied_keys:
+        parser.error(
+            "--num-tasks applies only to single-batch mode; use "
+            "--sequence-task-count for continual mode."
+        )
+    if args.mode != "continual" and "sequence_task_count" in supplied_keys:
+        parser.error(
+            "--sequence-task-count applies only to continual mode; use "
+            "--num-tasks for single-batch mode."
+        )
+    if args.mode != "continual" and "task_sequence" in supplied_keys:
+        parser.error("--task-sequence applies only to continual mode.")
+    if (
+        args.mode == "continual"
+        and args.task_sequence != "cw10"
+        and "sequence_task_count" in supplied_keys
+    ):
+        parser.error(
+            "--sequence-task-count cannot be combined with a named CW3/CW6 "
+            "--task-sequence."
+        )
+    for key, value in method_defaults(args.method).items():
+        if key not in explicit_destinations and key not in configured_keys:
+            setattr(args, key, value)
+    expected_gradient_strategy = bc_gradient_strategy_for_method(args.method)
+    if args.bc_gradient_strategy != expected_gradient_strategy:
+        parser.error(
+            f"--method {args.method} requires --bc-gradient-strategy "
+            f"{expected_gradient_strategy}."
+        )
+    required_combination_strategy = required_bc_combination_strategy(args.method)
+    if (
+        required_combination_strategy is not None
+        and args.bc_combination_strategy != required_combination_strategy
+    ):
+        parser.error(
+            f"--method {args.method} requires --bc-combination-strategy "
+            f"{required_combination_strategy}."
+        )
+    if not is_method_compatible(args.mode, args.method):
+        parser.error(f"Method '{args.method}' is not compatible with mode '{args.mode}'.")
+    if (
+        get_method(args.method).llm_prior_initialization
+        and args.exploration_strategy != "current"
+    ):
+        parser.error(
+            "Implicit policy-prior methods require --exploration-strategy current "
+            "so old heads never act in the new task."
+        )
+    if (
+        args.mode == "continual"
+        and get_method(args.method).multi_head
+        and not args.reset_buffer_on_task_change
+    ):
+        parser.error(
+            "Multi-head methods require --reset-buffer-on-task-change because "
+            "SAC update batches must contain one task-specific alpha/head."
+        )
+    if args.total_steps is None:
+        args.total_steps = args.steps_per_task
+    if args.semantic_segments is not None:
+        args.semantic_segments = list(args.semantic_segments)
+    if args.semantic_segment_weights is not None:
+        parsed_weights: dict[str, float] = {}
+        for item in args.semantic_segment_weights:
+            if "=" not in item:
+                parser.error(
+                    "--semantic-segment-weights entries must use SEGMENT=WEIGHT."
+                )
+            segment, raw_weight = item.split("=", 1)
+            segment = segment.strip()
+            try:
+                weight = float(raw_weight)
+            except ValueError:
+                parser.error(f"Invalid semantic segment weight: {item!r}")
+            if not segment or weight <= 0.0:
+                parser.error("Semantic segment weights must be positive.")
+            parsed_weights[segment] = weight
+        selected = tuple(args.semantic_segments or parsed_weights)
+        try:
+            args.semantic_segment_weights = dict(
+                normalize_segment_weights(
+                    parsed_weights,
+                    selected_segments=selected,
+                    field_name="--semantic-segment-weights",
+                )
+            )
+        except ValueError as error:
+            parser.error(str(error))
+    if not math.isfinite(args.background_segment_ratio) or (
+        args.background_segment_ratio < 0.0
+    ):
+        parser.error(
+            "--background-segment-ratio must be finite and non-negative."
+        )
+    if not math.isfinite(args.task_specific_segment_ratio) or (
+        args.task_specific_segment_ratio < 0.0
+    ):
+        parser.error(
+            "--task-specific-segment-ratio must be finite and non-negative."
+        )
+    if args.semantic_post_success_steps < 0:
+        parser.error("--semantic-post-success-steps must be non-negative.")
+    if args.llm_controller_update_every_evals <= 0:
+        parser.error("--llm-controller-update-every-evals must be positive.")
+    if not 1 <= args.sequence_task_count <= 10:
+        parser.error("--sequence-task-count must be between 1 and 10.")
+    if not 1 <= args.num_tasks <= 10:
+        parser.error("--num-tasks must be between 1 and 10.")
+    if args.steps_per_task <= 0 or args.total_steps <= 0:
+        parser.error("Training steps must be positive.")
+    if args.replay_size <= 0 or args.batch_size <= 0:
+        parser.error("Replay size and batch size must be positive.")
+    if args.critic_ensemble_size < 2:
+        parser.error("--critic-ensemble-size must be at least two.")
+    if (
+        not math.isfinite(args.critic_bootstrap_probability)
+        or not 0.0 < args.critic_bootstrap_probability <= 1.0
+    ):
+        parser.error("--critic-bootstrap-probability must be in (0, 1].")
+    if not math.isfinite(args.optimistic_ucb_beta) or args.optimistic_ucb_beta < 0.0:
+        parser.error("--optimistic-ucb-beta must be finite and non-negative.")
+    if args.optimistic_action_candidates <= 0:
+        parser.error("--optimistic-action-candidates must be positive.")
+    if args.n_step_return <= 0:
+        parser.error("--n-step-return must be positive.")
+    if (
+        not math.isfinite(args.prioritized_replay_fraction)
+        or not 0.0 <= args.prioritized_replay_fraction <= 1.0
+    ):
+        parser.error("--prioritized-replay-fraction must be in [0, 1].")
+    if not math.isfinite(args.priority_alpha) or args.priority_alpha < 0.0:
+        parser.error("--priority-alpha must be finite and non-negative.")
+    if (
+        not math.isfinite(args.priority_beta_start)
+        or not math.isfinite(args.priority_beta_end)
+        or not 0.0 <= args.priority_beta_start <= args.priority_beta_end <= 1.0
+    ):
+        parser.error("PER betas must satisfy 0 <= start <= end <= 1.")
+    if args.priority_beta_steps < 0:
+        parser.error("--priority-beta-steps must be non-negative.")
+    if not math.isfinite(args.priority_epsilon) or args.priority_epsilon <= 0.0:
+        parser.error("--priority-epsilon must be finite and positive.")
+    if (
+        get_method(args.method).success_replay_teacher is not None
+        and args.episodic_memory_per_task <= 0
+    ):
+        parser.error(
+            "Successful replay methods require --episodic-memory-per-task "
+            "to be positive."
+        )
+    if args.start_steps < 0 or args.update_after < 0 or args.update_every <= 0:
+        parser.error(
+            "Start/update-after steps must be non-negative and update-every positive."
+        )
+    if args.max_episode_steps <= 0:
+        parser.error("--max-episode-steps must be positive.")
+    if not math.isfinite(args.learning_rate) or args.learning_rate <= 0.0:
+        parser.error("--learning-rate must be finite and positive.")
+    if not math.isfinite(args.gamma) or not 0.0 <= args.gamma <= 1.0:
+        parser.error("--gamma must be finite and in [0, 1].")
+    if not math.isfinite(args.polyak) or not 0.0 <= args.polyak <= 1.0:
+        parser.error("--polyak must be finite and in [0, 1].")
+    if not math.isfinite(args.target_output_std) or args.target_output_std <= 0.0:
+        parser.error("--target-output-std must be finite and positive.")
+    if not math.isfinite(args.initial_log_alpha):
+        parser.error("--initial-log-alpha must be finite.")
+    if args.eval_every <= 0:
+        parser.error("--eval-every must be positive.")
+    if args.gradient_diagnostics_interval <= 0:
+        parser.error("--gradient-diagnostics-interval must be positive.")
+    if args.gradient_diagnostics_source_batch_size <= 0:
+        parser.error("--gradient-diagnostics-source-batch-size must be positive.")
+    if args.llm_controller_max_output_tokens <= 0:
+        parser.error("--llm-controller-max-output-tokens must be positive.")
+    if not math.isfinite(args.actor_cloning_coefficient) or (
+        args.actor_cloning_coefficient < 0.0
+    ):
+        parser.error(
+            "--actor-cloning-coefficient must be finite and non-negative."
+        )
+    if not math.isfinite(args.recall_value_reg_coef) or args.recall_value_reg_coef < 0.0:
+        parser.error("--recall-value-reg-coef must be finite and non-negative.")
+    if not math.isfinite(args.bc_max_norm_ratio) or args.bc_max_norm_ratio <= 0.0:
+        parser.error("--bc-max-norm-ratio must be finite and positive.")
+    if (
+        not math.isfinite(args.bc_adaptive_target_ratio)
+        or args.bc_adaptive_target_ratio < 0.0
+    ):
+        parser.error("--bc-adaptive-target-ratio must be finite and non-negative.")
+    if (
+        not math.isfinite(args.bc_adaptive_conflict_ratio)
+        or args.bc_adaptive_conflict_ratio < 0.0
+    ):
+        parser.error("--bc-adaptive-conflict-ratio must be finite and non-negative.")
+    if args.bc_adaptive_conflict_ratio > args.bc_adaptive_target_ratio:
+        parser.error(
+            "--bc-adaptive-conflict-ratio cannot exceed "
+            "--bc-adaptive-target-ratio."
+        )
+    if not math.isfinite(args.bc_cagrad_alpha) or not 0.0 <= args.bc_cagrad_alpha < 1.0:
+        parser.error("--bc-cagrad-alpha must be finite and in [0, 1).")
+    if not math.isfinite(args.kl_budget_low) or args.kl_budget_low < 0.0:
+        parser.error("--kl-budget-low must be finite and non-negative.")
+    if not math.isfinite(args.kl_budget_high) or args.kl_budget_high <= args.kl_budget_low:
+        parser.error("--kl-budget-high must be finite and exceed --kl-budget-low.")
+    if (
+        not math.isfinite(args.kl_budget_ema_beta)
+        or not 0.0 <= args.kl_budget_ema_beta < 1.0
+    ):
+        parser.error("--kl-budget-ema-beta must be finite and in [0, 1).")
+    if args.conflict_lora_rank <= 0:
+        parser.error("--conflict-lora-rank must be positive.")
+    if (
+        not math.isfinite(args.conflict_lora_coefficient)
+        or args.conflict_lora_coefficient < 0.0
+    ):
+        parser.error("--conflict-lora-coefficient must be finite and non-negative.")
+    if (
+        not math.isfinite(args.conflict_lora_max_norm_ratio)
+        or args.conflict_lora_max_norm_ratio <= 0.0
+    ):
+        parser.error("--conflict-lora-max-norm-ratio must be finite and positive.")
+    if not 0.0 <= args.llm_prior_min_confidence <= 1.0:
+        parser.error("--llm-prior-min-confidence must be in [0, 1].")
+    if args.implicit_prior_reset_states <= 0 or args.implicit_prior_updates <= 0:
+        parser.error("Implicit-prior reset states and updates must be positive.")
+    if (
+        not math.isfinite(args.implicit_prior_learning_rate)
+        or args.implicit_prior_learning_rate <= 0.0
+    ):
+        parser.error("--implicit-prior-learning-rate must be finite and positive.")
+    low, mid, high = args.bc_progress_thresholds
+    if not all(math.isfinite(value) for value in (low, mid, high)) or not (
+        0.0 <= low < mid < high <= 1.0
+    ):
+        parser.error(
+            "--bc-progress-thresholds must satisfy 0 <= LOW < MID < HIGH <= 1."
+        )
+    if len(args.bc_progress_multipliers) != 4 or not all(
+        math.isfinite(value) and 0.0 <= value <= 1.0
+        for value in args.bc_progress_multipliers
+    ):
+        parser.error(
+            "--bc-progress-multipliers must contain four finite values in [0, 1]."
+        )
+    if args.bc_progress_window <= 0:
+        parser.error("--bc-progress-window must be positive.")
+    if args.gradient_clip_norm is not None and (
+        not math.isfinite(args.gradient_clip_norm)
+        or args.gradient_clip_norm <= 0.0
+    ):
+        parser.error(
+            "--gradient-clip-norm must be finite and positive when provided."
+        )
+    if args.best_return_eval_episodes <= 0:
+        parser.error("--best-return-eval-episodes must be positive.")
+    if args.adaptive_critic_init and args.reset_critic_on_task_change:
+        parser.error(
+            "--adaptive-critic-init and --reset-critic-on-task-change are "
+            "mutually exclusive."
+        )
+    if args.adaptive_critic_init and args.critic_reset_task_indices:
+        parser.error(
+            "--adaptive-critic-init and --critic-reset-task-indices are "
+            "mutually exclusive."
+        )
+    if args.critic_probe_transitions <= 0:
+        parser.error("--critic-probe-transitions must be positive.")
+    if args.critic_warmup_updates <= 0:
+        parser.error("--critic-warmup-updates must be positive.")
+    if args.critic_head_hidden_size <= 0:
+        parser.error("--critic-head-hidden-size must be positive.")
+    if not math.isfinite(args.cl_reg_coef) or args.cl_reg_coef < 0.0:
+        parser.error("--cl-reg-coef must be finite and non-negative.")
+    if args.fisher_batches <= 0:
+        parser.error("--fisher-batches must be positive.")
+    if args.packnet_retrain_steps < 0:
+        parser.error("--packnet-retrain-steps must be non-negative.")
+    if (
+        not math.isfinite(args.ssde_dormancy_threshold)
+        or args.ssde_dormancy_threshold < 0.0
+    ):
+        parser.error(
+            "--ssde-dormancy-threshold must be finite and non-negative."
+        )
+    if args.ssde_dormancy_check_every <= 0:
+        parser.error("--ssde-dormancy-check-every must be positive.")
+    if args.ssde_retrain_steps < 0:
+        parser.error("--ssde-retrain-steps must be non-negative.")
+    if args.ssde_hidden_size <= 0 or args.ssde_descriptor_dim <= 0:
+        parser.error("SSDE hidden and descriptor dimensions must be positive.")
+    for name in (
+        "ssde_fixed_lasso_alpha",
+        "ssde_random_lasso_alpha_start",
+        "ssde_random_lasso_alpha_end",
+        "ssde_beta_lambda",
+        "ssde_sensitivity_threshold",
+    ):
+        value = getattr(args, name)
+        if not math.isfinite(value) or value <= 0.0:
+            parser.error(f"--{name.replace('_', '-')} must be finite and positive.")
+    if not math.isfinite(args.ssde_default_beta) or not 0.0 <= args.ssde_default_beta <= 1.0:
+        parser.error("--ssde-default-beta must lie in [0, 1].")
+    if args.ssde_sensitivity_interval <= 0 or args.ssde_sensitivity_batch_size <= 0:
+        parser.error("SSDE sensitivity interval and batch size must be positive.")
+    if args.ssde_stop_reset_after_steps <= 0:
+        parser.error("--ssde-stop-reset-after-steps must be positive.")
+    if not math.isfinite(args.ssde_target_entropy):
+        parser.error("--ssde-target-entropy must be finite.")
+    if args.ssde_distillation_steps < 0:
+        parser.error("--ssde-distillation-steps must be non-negative.")
+    if args.critic_reset_task_indices is not None:
+        for index in args.critic_reset_task_indices:
+            if index < 0:
+                parser.error("--critic-reset-task-indices must be non-negative.")
+    if args.full_bc_reference_episodes <= 0:
+        parser.error("--full-bc-reference-episodes must be positive.")
+    if args.full_bc_reference_max_attempts < args.full_bc_reference_episodes:
+        parser.error(
+            "--full-bc-reference-max-attempts must be at least "
+            "--full-bc-reference-episodes."
+        )
+    if args.packnet_retrain_steps < 0:
+        parser.error("--packnet-retrain-steps must be non-negative.")
+    if args.method == "wsrl_continual" and args.wsrl_warmup_steps <= 0:
+        parser.error("--wsrl-warmup-steps must be positive.")
+    if get_method(args.method).guide_mode in {"curriculum", "demonstration_curriculum"}:
+        if not 0 < args.jsrl_initial_guide_steps < args.max_episode_steps:
+            parser.error(
+                "--jsrl-initial-guide-steps must be positive and below the episode horizon."
+            )
+        if args.jsrl_curriculum_stages < 2:
+            parser.error("--jsrl-curriculum-stages must be at least 2.")
+        if args.jsrl_evaluation_interval <= 0 or (
+            args.jsrl_evaluation_interval % args.eval_every != 0
+        ):
+            parser.error(
+                "--jsrl-evaluation-interval must be positive and divisible by --eval-every."
+            )
+        if args.jsrl_moving_average_window <= 0:
+            parser.error("--jsrl-moving-average-window must be positive.")
+        if (
+            not math.isfinite(args.jsrl_stage_tolerance)
+            or not 0.0 <= args.jsrl_stage_tolerance < 1.0
+        ):
+            parser.error("--jsrl-stage-tolerance must be finite and in [0, 1).")
+        if args.jsrl_min_evaluations_per_stage <= 0:
+            parser.error("--jsrl-min-evaluations-per-stage must be positive.")
+        if (
+            args.jsrl_max_evaluations_without_advance
+            < args.jsrl_moving_average_window
+            or args.jsrl_max_evaluations_without_advance
+            < args.jsrl_min_evaluations_per_stage
+        ):
+            parser.error(
+                "--jsrl-max-evaluations-without-advance must be at least both "
+                "the moving-average window and minimum evaluations per stage."
+            )
+    if not math.isfinite(args.dg_min_guide_improvement):
+        parser.error("--dg-min-guide-improvement must be finite.")
+    if args.stoch_eval_episodes <= 0:
+        parser.error("--stoch-eval-episodes must be positive.")
+    if args.det_eval_episodes < 0:
+        parser.error("--det-eval-episodes must be non-negative.")
+    if args.tail_size <= 0 or args.aggregate_tail_size <= 0:
+        parser.error("Metric tail sizes must be positive.")
+    if (
+        args.task_specific_segment_ratio > 0.0
+        and args.task_specific_segment_manifest is None
+        and args.segment_selection_mode != "llm_online"
+    ):
+        parser.error(
+            "--task-specific-segment-ratio requires "
+            "--task-specific-segment-manifest."
+        )
+    if args.segment_selection_mode == "llm_online" and args.mode != "continual":
+        parser.error("llm_online segment selection requires --mode continual.")
+    semantic_selection_methods = {
+        "semantic_local_bc",
+        "adaptive_semantic_bc",
+        "general_task_specific_bc",
+        "semantic_hybrid_bc",
+    }
+    if (
+        args.segment_selection_mode != "fixed"
+        and args.method not in semantic_selection_methods
+    ):
+        parser.error(
+            f"--segment-selection-mode {args.segment_selection_mode} is not "
+            f"implemented for method {args.method}."
+        )
+    if (
+        args.segment_selection_manifest is not None
+        or args.task_specific_segment_manifest is not None
+    ) and args.method not in semantic_selection_methods:
+        parser.error(
+            "Semantic selection manifests require a semantic memory method."
+        )
+    for option_name, path_value in (
+        ("--baseline-curves", args.baseline_curves),
+        ("--segment-selection-manifest", args.segment_selection_manifest),
+        ("--task-specific-segment-manifest", args.task_specific_segment_manifest),
+    ):
+        if path_value is not None and not Path(path_value).expanduser().is_file():
+            parser.error(f"{option_name} file does not exist: {path_value}")
+    return args
+
+
+def timestamp() -> str:
+    return datetime.now().strftime("%Y%m%d_%H%M%S")
+
+
+def make_run_directory(base_output_dir: str | Path, run_name: str) -> Path:
+    run_dir = Path(base_output_dir) / run_name
+    run_dir.mkdir(parents=True, exist_ok=False)
+    (run_dir / "checkpoints").mkdir()
+    return run_dir
+
+
+def run_logged_subprocess(
+    command: list[str],
+    *,
+    log_path: Path,
+    env: dict[str, str] | None = None,
+) -> int:
+    process_env = os.environ.copy()
+    if env:
+        process_env.update(env)
+    process_env["PYTHONUNBUFFERED"] = "1"
+
+    with log_path.open("w", encoding="utf-8") as log_file:
+        process = subprocess.Popen(
+            command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            bufsize=1,
+            env=process_env,
+        )
+        assert process.stdout is not None
+        for line in process.stdout:
+            print(line, end="", flush=True)
+            log_file.write(line)
+            log_file.flush()
+        return process.wait()
+
+
+def run_single(args: argparse.Namespace) -> None:
+    output_dir = args.output_dir or "outputs/single_task"
+    run_name = args.run_name or f"{args.method}_{args.task}_seed{args.seed}_{timestamp()}"
+    run_dir = make_run_directory(output_dir, run_name)
+    result = run_single_task_experiment(args, run_dir)
+    print(
+        json.dumps(
+            {
+                "method": args.method,
+                "task": args.task,
+                "final_success": result["summary"]["final_stochastic_success_rate"],
+                "final_return": result["summary"]["final_stochastic_average_return"],
+                "run_directory": str(run_dir),
+            },
+            indent=2,
+        )
+    )
+
+
+def run_single_batch(args: argparse.Namespace) -> None:
+    tasks = get_cw10_tasks(args.env_version)[: args.num_tasks]
+    output_dir = args.output_dir or "outputs/cw10_single_task_baselines"
+    run_name = args.run_name or f"{args.method}_cw10_seed{args.seed}_{timestamp()}"
+    batch_dir = Path(output_dir) / run_name
+    runs_dir = batch_dir / "runs"
+    logs_dir = batch_dir / "logs"
+    runs_dir.mkdir(parents=True, exist_ok=False)
+    logs_dir.mkdir()
+
+    write_json(
+        batch_dir / "batch_config.json",
+        {
+            "method": args.method,
+            "tasks": tasks,
+            "seed": args.seed,
+            "env_version": args.env_version,
+            "reward_function_version": args.reward_function_version,
+            "steps_per_task": args.steps_per_task,
+            "eval_every": args.eval_every,
+            "det_eval_episodes": args.det_eval_episodes,
+            "stoch_eval_episodes": args.stoch_eval_episodes,
+            "max_episode_steps": args.max_episode_steps,
+        },
+    )
+
+    manifest_rows: list[dict[str, object]] = []
+    script_path = Path(__file__).resolve()
+
+    for task_index, task_name in enumerate(tasks):
+        task_run_name = f"{task_name}_seed{args.seed}"
+        log_path = logs_dir / f"{task_run_name}.log"
+        command = [
+            sys.executable,
+            str(script_path),
+            "--mode",
+            "single",
+            "--method",
+            args.method,
+            "--task",
+            task_name,
+            "--env-version",
+            args.env_version,
+            "--reward-function-version",
+            args.reward_function_version,
+            "--total-steps",
+            str(args.steps_per_task),
+            "--eval-every",
+            str(args.eval_every),
+            "--det-eval-episodes",
+            str(args.det_eval_episodes),
+            "--stoch-eval-episodes",
+            str(args.stoch_eval_episodes),
+            "--replay-size",
+            str(args.replay_size),
+            "--batch-size",
+            str(args.batch_size),
+            "--start-steps",
+            str(args.start_steps),
+            "--update-after",
+            str(args.update_after),
+            "--update-every",
+            str(args.update_every),
+            "--learning-rate",
+            str(args.learning_rate),
+            "--gamma",
+            str(args.gamma),
+            "--polyak",
+            str(args.polyak),
+            "--target-output-std",
+            str(args.target_output_std),
+            "--initial-log-alpha",
+            str(args.initial_log_alpha),
+            "--max-episode-steps",
+            str(args.max_episode_steps),
+            "--seed",
+            str(args.seed),
+            "--device",
+            args.device,
+            "--output-dir",
+            str(runs_dir),
+            "--run-name",
+            task_run_name,
+        ]
+        started_at = time.time()
+        started_iso = datetime.now(timezone.utc).isoformat()
+        print(
+            f"[single-batch] start task={task_index + 1}/{len(tasks)} "
+            f"name={task_name} seed={args.seed} log={log_path}",
+            flush=True,
+        )
+        return_code = run_logged_subprocess(
+            command,
+            log_path=log_path,
+        )
+        finished_iso = datetime.now(timezone.utc).isoformat()
+        elapsed_seconds = time.time() - started_at
+        print(
+            f"[single-batch] finish task={task_index + 1}/{len(tasks)} "
+            f"name={task_name} seed={args.seed} return_code={return_code} "
+            f"elapsed_seconds={elapsed_seconds:.1f}",
+            flush=True,
+        )
+        manifest_rows.append(
+            {
+                "task_index": task_index,
+                "task_name": task_name,
+                "status": "completed" if return_code == 0 else "failed",
+                "run_name": task_run_name,
+                "run_directory": str(runs_dir / task_run_name),
+                "log_path": str(log_path),
+                "return_code": return_code,
+                "started_at_utc": started_iso,
+                "finished_at_utc": finished_iso,
+                "elapsed_seconds": elapsed_seconds,
+                "error": "" if return_code == 0 else f"process exited with {return_code}",
+            }
+        )
+        if return_code != 0:
+            break
+
+    manifest_path = batch_dir / "batch_manifest.csv"
+    with manifest_path.open("w", encoding="utf-8", newline="") as file:
+        writer = csv.DictWriter(file, fieldnames=list(manifest_rows[0].keys()))
+        writer.writeheader()
+        writer.writerows(manifest_rows)
+
+    if any(row["status"] != "completed" for row in manifest_rows):
+        write_json(batch_dir / "summary.json", {"status": "failed", "batch_directory": str(batch_dir)})
+        raise SystemExit(1)
+
+    aggregate = aggregate_single_task_baselines(
+        batch_directory=batch_dir,
+        output_directory=batch_dir / "aggregate",
+        tail_size=args.aggregate_tail_size,
+    )
+    write_json(
+        batch_dir / "summary.json",
+        {
+            "status": "completed",
+            "method": args.method,
+            "batch_directory": str(batch_dir),
+            "aggregate_summary": str(aggregate.summary_json_path),
+            "aggregate_curves": str(aggregate.curves_json_path),
+        },
+    )
+    print(
+        json.dumps(
+            {
+                "method": args.method,
+                "batch_directory": str(batch_dir),
+                "aggregate": str(aggregate.summary_json_path),
+            },
+            indent=2,
+        )
+    )
+
+
+def run_continual(args: argparse.Namespace) -> None:
+    output_dir = args.output_dir or "outputs/cw10_continual"
+    run_name = args.run_name or f"{args.method}_cw10_seed{args.seed}_{timestamp()}"
+    run_dir = make_run_directory(output_dir, run_name)
+    result = run_cw10_experiment(args, run_dir)
+    payload = dict(result["summary"])
+    payload["method"] = args.method
+    print(json.dumps(payload, indent=2))
+
+
+def main() -> None:
+    args = parse_args()
+    wall_start = time.time()
+    if args.mode == "single":
+        run_single(args)
+    elif args.mode == "single-batch":
+        run_single_batch(args)
+    else:
+        run_continual(args)
+    elapsed = time.time() - wall_start
+    hours, remainder = divmod(int(elapsed), 3600)
+    minutes, seconds = divmod(remainder, 60)
+    print(f"Total wall-clock time: {hours}h {minutes}m {seconds}s ({elapsed:.1f}s)")
+
+
+if __name__ == "__main__":
+    main()

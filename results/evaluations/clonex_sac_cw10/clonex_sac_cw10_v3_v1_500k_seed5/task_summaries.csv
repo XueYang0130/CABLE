@@ -1,0 +1,11 @@
+task_index,task_name,exploration_strategy,selected_exploration_head,selected_exploration_source_task,selected_exploration_mean_return,global_step_end,task_gradient_updates,cumulative_gradient_updates,completed_training_episodes,mean_training_return,final_alpha,replay_buffer_size,elapsed_seconds,final_guide_steps,curriculum_transitions,reference_success_episodes,reference_states,success_replay_seen_states,background_reference_states,task_specific_reference_states,semantic_segment_scheme,collected_segment_states,selected_segments,task_specific_segments,segment_priority,segment_weights,segment_selection_reason,segment_selection_source,success_replay_teacher,best_teacher_step,best_teacher_success,best_teacher_return
+0,hammer-v3,best_return,,,,500000,499000,499000,2500,78460.36224865282,4.946876049041748,500000,13334.379301786423,0,[],,,,,,,,,,,,,,,,,
+1,push-wall-v3,best_return,,,,1000000,499000,998000,2500,19218.04861566519,11.000299453735352,500000,28683.506378412247,0,[],,,,,,,,,,,,,,,,,
+2,faucet-close-v3,best_return,,,,1500000,499000,1497000,2500,253979.77452367902,13.704267501831055,500000,44279.533771276474,0,[],,,,,,,,,,,,,,,,,
+3,push-back-v3,best_return,,,,2000000,499000,1996000,2500,168535.5852239932,23.709491729736328,500000,60096.95506691933,0,[],,,,,,,,,,,,,,,,,
+4,stick-pull-v3,best_return,,,,2500000,499000,2495000,2500,6694.7122080462905,2.0952322483062744,500000,76107.58774018288,0,[],,,,,,,,,,,,,,,,,
+5,handle-press-side-v3,best_return,,,,3000000,499000,2994000,2500,353093.16527145443,3.0536293983459473,500000,92015.06913852692,0,[],,,,,,,,,,,,,,,,,
+6,push-v3,best_return,,,,3500000,499000,3493000,2500,94735.34885101175,22.59832000732422,500000,108156.47512626648,0,[],,,,,,,,,,,,,,,,,
+7,shelf-place-v3,best_return,,,,4000000,499000,3992000,2500,-33.90234509175236,0.004193057306110859,500000,124928.17999124527,0,[],,,,,,,,,,,,,,,,,
+8,window-close-v3,best_return,,,,4500000,499000,4491000,2500,263450.38861902535,12.804330825805664,500000,141621.36532759666,0,[],,,,,,,,,,,,,,,,,
+9,peg-unplug-side-v3,best_return,,,,5000000,499000,4990000,2500,231315.3503992993,16.274703979492188,500000,158519.72396922112,0,[],,,,,,,,,,,,,,,,,

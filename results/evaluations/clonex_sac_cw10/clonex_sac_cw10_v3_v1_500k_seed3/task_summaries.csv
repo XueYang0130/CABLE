@@ -1,0 +1,11 @@
+task_index,task_name,exploration_strategy,selected_exploration_head,selected_exploration_source_task,selected_exploration_mean_return,global_step_end,task_gradient_updates,cumulative_gradient_updates,completed_training_episodes,mean_training_return,final_alpha,replay_buffer_size,elapsed_seconds,final_guide_steps,curriculum_transitions,reference_success_episodes,reference_states,success_replay_seen_states,background_reference_states,task_specific_reference_states,semantic_segment_scheme,collected_segment_states,selected_segments,task_specific_segments,segment_priority,segment_weights,segment_selection_reason,segment_selection_source,success_replay_teacher,best_teacher_step,best_teacher_success,best_teacher_return
+0,hammer-v3,best_return,,,,500000,499000,499000,2500,73116.8735862105,5.02121114730835,500000,14052.80849647522,0,[],,,,,,,,,,,,,,,,,
+1,push-wall-v3,best_return,,,,1000000,499000,998000,2500,73203.04271848944,20.43031883239746,500000,30237.57027554512,0,[],,,,,,,,,,,,,,,,,
+2,faucet-close-v3,best_return,,,,1500000,499000,1497000,2500,265919.04898242484,12.04627799987793,500000,46733.51142287254,0,[],,,,,,,,,,,,,,,,,
+3,push-back-v3,best_return,,,,2000000,499000,1996000,2500,252291.96391132363,13.15771770477295,500000,63686.245262384415,0,[],,,,,,,,,,,,,,,,,
+4,stick-pull-v3,best_return,,,,2500000,499000,2495000,2500,75473.73840824042,42.120540618896484,500000,81166.86305475235,0,[],,,,,,,,,,,,,,,,,
+5,handle-press-side-v3,best_return,,,,3000000,499000,2994000,2500,374018.64074283093,1.985714316368103,500000,98339.94074892998,0,[],,,,,,,,,,,,,,,,,
+6,push-v3,best_return,,,,3500000,499000,3493000,2500,161115.72852468805,33.849613189697266,500000,115050.16835737228,0,[],,,,,,,,,,,,,,,,,
+7,shelf-place-v3,best_return,,,,4000000,499000,3992000,2500,171817.7145849024,26.751922607421875,500000,132173.89676332474,0,[],,,,,,,,,,,,,,,,,
+8,window-close-v3,best_return,,,,4500000,499000,4491000,2500,296489.8524198267,7.496769905090332,500000,149447.52827215195,0,[],,,,,,,,,,,,,,,,,
+9,peg-unplug-side-v3,best_return,,,,5000000,499000,4990000,2500,244580.30084649572,15.17778205871582,500000,167425.57016038895,0,[],,,,,,,,,,,,,,,,,

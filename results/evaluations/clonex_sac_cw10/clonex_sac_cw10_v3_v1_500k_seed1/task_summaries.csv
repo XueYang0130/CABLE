@@ -1,0 +1,11 @@
+task_index,task_name,exploration_strategy,selected_exploration_head,selected_exploration_source_task,selected_exploration_mean_return,global_step_end,task_gradient_updates,cumulative_gradient_updates,completed_training_episodes,mean_training_return,final_alpha,replay_buffer_size,elapsed_seconds,final_guide_steps,curriculum_transitions,reference_success_episodes,reference_states,success_replay_seen_states,background_reference_states,task_specific_reference_states,semantic_segment_scheme,collected_segment_states,selected_segments,task_specific_segments,segment_priority,segment_weights,segment_selection_reason,segment_selection_source,success_replay_teacher,best_teacher_step,best_teacher_success,best_teacher_return
+0,hammer-v3,best_return,,,,500000,499000,499000,2500,78245.1169841096,5.405378818511963,500000,13665.880662202835,0,[],,,,,,,,,,,,,,,,,
+1,push-wall-v3,best_return,,,,1000000,499000,998000,2500,86464.04893135093,29.305702209472656,500000,29157.958887815475,0,[],,,,,,,,,,,,,,,,,
+2,faucet-close-v3,best_return,,,,1500000,499000,1497000,2500,225559.92795692672,14.51491641998291,500000,45125.21838974953,0,[],,,,,,,,,,,,,,,,,
+3,push-back-v3,best_return,,,,2000000,499000,1996000,2500,235070.21513846816,15.84764289855957,500000,61321.41389274597,0,[],,,,,,,,,,,,,,,,,
+4,stick-pull-v3,best_return,,,,2500000,499000,2495000,2500,240152.63420999597,71.0457992553711,500000,78084.82641363144,0,[],,,,,,,,,,,,,,,,,
+5,handle-press-side-v3,best_return,,,,3000000,499000,2994000,2500,370517.73880173103,2.299767255783081,500000,94596.7178182602,0,[],,,,,,,,,,,,,,,,,
+6,push-v3,best_return,,,,3500000,499000,3493000,2500,266239.73394962033,19.6641788482666,500000,111289.49078798294,0,[],,,,,,,,,,,,,,,,,
+7,shelf-place-v3,best_return,,,,4000000,499000,3992000,2500,158385.0258434642,18.473085403442383,500000,128630.11647725105,0,[],,,,,,,,,,,,,,,,,
+8,window-close-v3,best_return,,,,4500000,499000,4491000,2500,286850.91990295943,11.488816261291504,500000,145667.84669232368,0,[],,,,,,,,,,,,,,,,,
+9,peg-unplug-side-v3,best_return,,,,5000000,499000,4990000,2500,258657.73464254083,13.054511070251465,500000,162949.34803056717,0,[],,,,,,,,,,,,,,,,,

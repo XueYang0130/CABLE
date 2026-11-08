@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying CABLE manuscript when using this software."
+title: "CABLE: Continual Reinforcement Learning Code"
+type: software
+authors:
+  - family-names: Yang
+    given-names: Xue
+repository-code: "https://github.com/XueYang0130/CABLE"
+license: MIT
