@@ -15,7 +15,7 @@ def main():
     parser.add_argument('--output',type=Path,default=ROOT/'results/figures')
     args=parser.parse_args();args.output.mkdir(parents=True,exist_ok=True)
     index=json.loads((ROOT/'results/run_index.json').read_text())
-    labels={'success_replay_best_raw_pcgrad_projection_cw10':('CABLE','#DE8EAF'),'clonex_sac_cw10':('ClonEx-SAC','#83B8DA'),'recall_cw10':('RECALL','#E8C500')}
+    labels={'cable_cw10':('CABLE','#DE8EAF'),'clonex_sac_cw10':('ClonEx-SAC','#83B8DA'),'recall_cw10':('RECALL','#E8C500')}
     fig,axes=plt.subplots(2,5,figsize=(14,5.5),sharex=True,sharey=True)
     for group,(label,color) in labels.items():
         curves=defaultdict(list);names={}

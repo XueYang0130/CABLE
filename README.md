@@ -1,6 +1,6 @@
 # CABLE
 
-PyTorch implementation of CABLE for task-incremental continual reinforcement learning on Continual World task sequences using Meta-World v3.
+PyTorch implementation of CABLE for task-incremental continual reinforcement learning on Continual World.
 
 ## Installation
 
@@ -30,19 +30,7 @@ python scripts/train.py --config configs/cable_cw10.json --steps-per-task 200 --
 
 Run seeds 1–5 separately. Configurations for every archived CW10/CW3 run and ablation are in `configs/archived/`; `results/run_index.json` maps configurations to evaluation records. CW3 sequences are named `cw3_0` through `cw3_7` internally (CW3-1 through CW3-8 in the paper).
 
-Paper method names map to implementation IDs as follows:
-
-| Paper method | Implementation ID |
-|---|---|
-| CABLE | `success_replay_best_pcgrad` |
-| No projection | `success_replay_best` |
-| BC-priority projection | `success_replay_best_bc_priority_pcgrad` |
-| All replay states | `all_replay_best_pcgrad` |
-| Final teacher | `success_replay_final_pcgrad` |
-| Fine-tuning | `fine_tuning` |
-| ClonEx-SAC | `clonex_sac` |
-| RECALL | `recall` |
-| PackNet | `packnet` |
+Methods use the paper names: `cable`, `fine_tuning`, `clonex_sac`, `recall`, and `packnet`. Ablations are `no_projection`, `bc_priority`, `all_states`, and `final_teacher`.
 
 ## Recompute results without training
 
@@ -77,10 +65,9 @@ Repeat the training command for the required seeds and supply all completed batc
 - Actor and twin critics: separate four-hidden-layer MLPs, 256 units per layer, task-specific heads except for single-head fine-tuning and independent SAC.
 - First hidden layer: LayerNorm and tanh; subsequent layers: LeakyReLU with slope 0.2.
 - Task indicators select heads and are excluded from backbone inputs.
-- Reward configuration: `cw10_v1`, including the local v1-compatible Stick Pull implementation in `src/envs/cw_env.py`.
+- Environment versions are pinned in `requirements.txt`; reward handling is defined in `src/envs/cw_env.py`.
 - CABLE: successful-state reservoir, best observed teacher selected by evaluation success with return tie-breaking, fixed teacher-to-current Gaussian KL targets.
 - Gradient coordination acts on shared actor parameters and the coefficient-weighted BC gradient; critics use current-task transitions.
-- The executed development trainer was renamed from `continual_experiment_copy.py` to `continual_experiment.py`; numerical training logic is retained. Internal compatibility helpers are retained where required by this shared trainer, but unpublished research methods are not registered.
 - Archived configurations explicitly specify seeds and optimizer reset behavior. CW10 RECALL seed 1 retains optimizer state; seeds 2–5 reset it. CPU is the portable default; the original recorded device is retained in the result index. Recorded runtimes are not a controlled hardware comparison.
 
 The release does not include checkpoints, private credentials, development notes, or full training logs. Evaluation records support recomputation of aggregate metrics and learning curves; they do not replace retraining for independent validation. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

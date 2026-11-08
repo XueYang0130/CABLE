@@ -47,11 +47,7 @@ CONTINUAL_TASK_SEQUENCE_NAMES: tuple[str, ...] = (
 
 
 class StickPullV1CompatibleReward(gym.Wrapper):
-    """Project-local reward override for stick-pull-v3.
-
-    This keeps the old v1 reward structure but replaces the legacy object
-    indexing with explicit v3 positions so we can test learnability without
-    modifying the installed Meta-World package.
+    """Stick Pull reward with observation indices matched to the environment.
     """
 
     def __init__(self, env: gym.Env) -> None:

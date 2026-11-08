@@ -3,19 +3,19 @@ from methods.fine_tuning import METHOD as FINE_TUNING
 from methods.clonex_sac import METHOD as CLONEX_SAC
 from methods.packnet import METHOD as PACKNET
 from methods.recall import METHOD as RECALL
-from methods.success_replay_best import METHOD as SUCCESS_REPLAY_BEST
-from methods.success_replay_best_pcgrad import METHOD as SUCCESS_REPLAY_BEST_PCGRAD
-from methods.success_replay_final_pcgrad import METHOD as SUCCESS_REPLAY_FINAL_PCGRAD
-from methods.success_replay_best_bc_priority_pcgrad import METHOD as SUCCESS_REPLAY_BEST_BC_PRIORITY_PCGRAD
-from methods.all_replay_best_pcgrad import METHOD as ALL_REPLAY_BEST_PCGRAD
+from methods.no_projection import METHOD as NO_PROJECTION
+from methods.cable import METHOD as CABLE
+from methods.final_teacher import METHOD as FINAL_TEACHER
+from methods.bc_priority import METHOD as BC_PRIORITY
+from methods.all_states import METHOD as ALL_STATES
 
 SINGLE_TASK_BASELINE = MethodSpec(method_id="single_task_baseline", modes=frozenset({"single", "single-batch"}))
-METHOD_REGISTRY = {m.method_id: m for m in [SINGLE_TASK_BASELINE, FINE_TUNING, CLONEX_SAC, PACKNET, RECALL, SUCCESS_REPLAY_BEST, SUCCESS_REPLAY_BEST_PCGRAD, SUCCESS_REPLAY_FINAL_PCGRAD, SUCCESS_REPLAY_BEST_BC_PRIORITY_PCGRAD, ALL_REPLAY_BEST_PCGRAD]}
+METHOD_REGISTRY = {m.method_id: m for m in [SINGLE_TASK_BASELINE, FINE_TUNING, CLONEX_SAC, PACKNET, RECALL, NO_PROJECTION, CABLE, FINAL_TEACHER, BC_PRIORITY, ALL_STATES]}
 BC_GRADIENT_STRATEGY_BY_METHOD = {
-    "success_replay_best_pcgrad": "pcgrad_sac_priority",
-    "success_replay_final_pcgrad": "pcgrad_sac_priority",
-    "all_replay_best_pcgrad": "pcgrad_sac_priority",
-    "success_replay_best_bc_priority_pcgrad": "pcgrad_bc_priority",
+    "cable": "pcgrad_sac_priority",
+    "final_teacher": "pcgrad_sac_priority",
+    "all_states": "pcgrad_sac_priority",
+    "bc_priority": "pcgrad_bc_priority",
 }
 BC_COMBINATION_STRATEGY_BY_METHOD = {}
 

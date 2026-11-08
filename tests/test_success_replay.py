@@ -152,8 +152,8 @@ class BCProgressGateTests(unittest.TestCase):
 
 class SuccessfulReplayMethodTests(unittest.TestCase):
     def test_final_pcgrad_differs_from_best_pcgrad_only_by_teacher(self) -> None:
-        best = get_method("success_replay_best_pcgrad")
-        final = get_method("success_replay_final_pcgrad")
+        best = get_method("cable")
+        final = get_method("final_teacher")
 
         self.assertEqual(best.success_replay_teacher, "best")
         self.assertEqual(final.success_replay_teacher, "final")

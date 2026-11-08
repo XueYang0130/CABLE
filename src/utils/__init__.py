@@ -1,4 +1,4 @@
-"""General utilities for CRL-CW."""
+"""General utilities for CABLE."""
 
 from __future__ import annotations
 

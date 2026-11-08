@@ -1,4 +1,4 @@
-"""Training components for CRL-CW."""
+"""Training components for CABLE."""
 
 from .sac_trainer import (
     SACTrainer,

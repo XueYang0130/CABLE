@@ -21,7 +21,7 @@
   "initial_log_alpha": 1.0,
   "learning_rate": 0.001,
   "max_episode_steps": 200,
-  "method": "success_replay_best",
+  "method": "no_projection",
   "mode": "continual",
   "packnet_retrain_steps": 0,
   "polyak": 0.995,

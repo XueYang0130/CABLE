@@ -1,7 +1,8 @@
 {
-  "methods/success_replay_best.py": {
+  "methods/no_projection.py": {
     "development_sha256": "7c82c2282023429dddd1e9f31a2ac9d7985227c589571c73eecbc48cbdc0687d",
-    "release_sha256": "7c82c2282023429dddd1e9f31a2ac9d7985227c589571c73eecbc48cbdc0687d"
+    "release_sha256": "1e0bb771fe20e9cd54eedb729fc2a1a17bd058ec2791bb827d78b212d3bdfd1e",
+    "development_path": "methods/success_replay_best.py"
   },
   "methods/fine_tuning.py": {
     "development_sha256": "409ad48a333dadac9b8aef931c5a1d63f769498434e3a3d8cb0ed8d631b3df9f",
@@ -17,27 +18,31 @@
   },
   "methods/__init__.py": {
     "development_sha256": "09dad55875419e94f31dadcf83d6d3dece24849c2214e67bf8747bba4d752d5a",
-    "release_sha256": "57dfd6875361c8cd9a35d2c628574dc327e3ee16bec042eb544e21ae3fe09aa4"
+    "release_sha256": "a2bb5f993eea31a8730da3b4281cc538e13812b1b169658b7f2695d5b142d59f"
   },
-  "methods/success_replay_final_pcgrad.py": {
+  "methods/final_teacher.py": {
     "development_sha256": "4cf6cbe4a8807f7c5a64452d5b00acda22ac9af12123f7966771bf3ee3100124",
-    "release_sha256": "4cf6cbe4a8807f7c5a64452d5b00acda22ac9af12123f7966771bf3ee3100124"
+    "release_sha256": "dd725b1c6c9a23b79e2b25649e43f10b7c30d62ead7e60aef690172cb608fb7a",
+    "development_path": "methods/success_replay_final_pcgrad.py"
   },
-  "methods/success_replay_best_pcgrad.py": {
+  "methods/cable.py": {
     "development_sha256": "466aad68a564f79f88cd0afa052e5ef9d9a89403960bafceebe7cff9763b57b4",
-    "release_sha256": "466aad68a564f79f88cd0afa052e5ef9d9a89403960bafceebe7cff9763b57b4"
+    "release_sha256": "67f54b20efae82a408eb13441eae62290e2a68fd6387ce2bba547c194d8910a0",
+    "development_path": "methods/success_replay_best_pcgrad.py"
   },
   "methods/clonex_sac.py": {
     "development_sha256": "aa8ff3854986a0d4c5954bf802f66c82a12abb70042580f3512d4ebd6317c402",
     "release_sha256": "aa8ff3854986a0d4c5954bf802f66c82a12abb70042580f3512d4ebd6317c402"
   },
-  "methods/success_replay_best_bc_priority_pcgrad.py": {
+  "methods/bc_priority.py": {
     "development_sha256": "4445834ea22b3cabfee92c3f8ba7023b94106282a7a27f2045f8635a02bbdfde",
-    "release_sha256": "4445834ea22b3cabfee92c3f8ba7023b94106282a7a27f2045f8635a02bbdfde"
+    "release_sha256": "5a5ab2938e86535f00efcd182ef78be4b5f615d79d99f4994623261273ef8db0",
+    "development_path": "methods/success_replay_best_bc_priority_pcgrad.py"
   },
-  "methods/all_replay_best_pcgrad.py": {
+  "methods/all_states.py": {
     "development_sha256": "a4aa1559eb69d2fb3afb55ff43bde75256089e9f4d6cd795373ad8cc05212c8a",
-    "release_sha256": "a4aa1559eb69d2fb3afb55ff43bde75256089e9f4d6cd795373ad8cc05212c8a"
+    "release_sha256": "7db2a46198e68d088f4e1e227c1bca564e1e5f3942a13ae096b6fbac29fc284e",
+    "development_path": "methods/all_replay_best_pcgrad.py"
   },
   "methods/base.py": {
     "development_sha256": "58835f25029e5d362f9089104a1d1f3344d0c4fabafdb1d7581b8f7966cab497",
@@ -77,7 +82,7 @@
   },
   "src/training/__init__.py": {
     "development_sha256": "2ce7b156ff350f3796635f96549cfc907726909154e21fb7224a76952caaa4f1",
-    "release_sha256": "679e74dd0336d43d1351cbb9dca2f8bf79cf2172d411c6d99840207ee2a424eb"
+    "release_sha256": "47a8bceb64b1729724a63daed1252b8aae6e828efc36db79e903c103790cdccd"
   },
   "src/training/segment_selection.py": {
     "development_sha256": "098f231bcf99fda38857d84de70224ecc1ddfbac3b687c14dda999b030269904",
@@ -109,7 +114,7 @@
   },
   "src/agents/full_bc_agent.py": {
     "development_sha256": "baf882e2ede22d7f33d1419d35c991703959049757731073987458fcb1f0c4be",
-    "release_sha256": "baf882e2ede22d7f33d1419d35c991703959049757731073987458fcb1f0c4be"
+    "release_sha256": "e0e0fc17f199b1a747584c8d60ac66af8d5d2dce1c21d4cc6f67978877b7b293"
   },
   "src/agents/__init__.py": {
     "development_sha256": "ac8ade9d56f4c9ce30d0f3760f5a04b677cb322d5299a4f8ac4e2890d44d0be7",
@@ -153,7 +158,7 @@
   },
   "src/utils/__init__.py": {
     "development_sha256": "fdca6ff388b3cd029694e30b1a984fdc98eece9b951a28b75e5551baf537bf3b",
-    "release_sha256": "fdca6ff388b3cd029694e30b1a984fdc98eece9b951a28b75e5551baf537bf3b"
+    "release_sha256": "dc2e1dea3a5b4f5c92c40723f90aa5a2155d4b33e1e680865517087c4ec947c5"
   },
   "src/evaluation/single_task_baselines.py": {
     "development_sha256": "124e3ef90bd0276c4a064413a73466c70532b0fe08ca1cff58c68f91f4b6b387",
@@ -165,7 +170,7 @@
   },
   "src/evaluation/__init__.py": {
     "development_sha256": "8385a3b229d4951403a24e83bb957377a5bdd4d9db8aefb28aab8dac406efd3e",
-    "release_sha256": "8385a3b229d4951403a24e83bb957377a5bdd4d9db8aefb28aab8dac406efd3e"
+    "release_sha256": "b828adfd66a9108738ef696357070843dd096f96af7de8c43ccb8f25305e935a"
   },
   "src/evaluation/summary.py": {
     "development_sha256": "347d2bf58664a142f8d7cc6e5aa3d829beea41e07179b1e1dd85b428ecd30a7e",
@@ -181,6 +186,6 @@
   },
   "src/envs/cw_env.py": {
     "development_sha256": "f8d6e64b4ca4b8729e75e765cf0e7c286f11b975dc54afda902d10a6b304439c",
-    "release_sha256": "f8d6e64b4ca4b8729e75e765cf0e7c286f11b975dc54afda902d10a6b304439c"
+    "release_sha256": "8b210652fc87058f3073255b93aee8dd3895084ae810d62ab3a4ca1c567fafbe"
   }
 }

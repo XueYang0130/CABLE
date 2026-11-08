@@ -1,1402 +1,1577 @@
 [
   {
     "group": "fine_tuning_cw10",
-    "name": "fine_tuning_cw10_v3_v1_500k_seed1",
-    "config": "configs/archived/fine_tuning_cw10/fine_tuning_cw10_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/fine_tuning_cw10/fine_tuning_cw10_v3_v1_500k_seed1/evaluations.csv",
+    "name": "fine_tuning_cw10_seed1",
+    "config": "configs/archived/fine_tuning_cw10/fine_tuning_cw10_seed1.json",
+    "evaluations": "results/evaluations/fine_tuning_cw10/fine_tuning_cw10_seed1/evaluations.csv",
     "original_device": "cpu",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "fine_tuning_cw10_v3_v1_500k_seed1"
   },
   {
     "group": "fine_tuning_cw10",
-    "name": "fine_tuning_cw10_v3_v1_500k_seed2",
-    "config": "configs/archived/fine_tuning_cw10/fine_tuning_cw10_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/fine_tuning_cw10/fine_tuning_cw10_v3_v1_500k_seed2/evaluations.csv",
+    "name": "fine_tuning_cw10_seed2",
+    "config": "configs/archived/fine_tuning_cw10/fine_tuning_cw10_seed2.json",
+    "evaluations": "results/evaluations/fine_tuning_cw10/fine_tuning_cw10_seed2/evaluations.csv",
     "original_device": "cpu",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "fine_tuning_cw10_v3_v1_500k_seed2"
   },
   {
     "group": "fine_tuning_cw10",
-    "name": "fine_tuning_cw10_v3_v1_500k_seed3",
-    "config": "configs/archived/fine_tuning_cw10/fine_tuning_cw10_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/fine_tuning_cw10/fine_tuning_cw10_v3_v1_500k_seed3/evaluations.csv",
+    "name": "fine_tuning_cw10_seed3",
+    "config": "configs/archived/fine_tuning_cw10/fine_tuning_cw10_seed3.json",
+    "evaluations": "results/evaluations/fine_tuning_cw10/fine_tuning_cw10_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "fine_tuning_cw10_v3_v1_500k_seed3"
   },
   {
     "group": "fine_tuning_cw10",
-    "name": "fine_tuning_cw10_v3_v1_500k_seed4",
-    "config": "configs/archived/fine_tuning_cw10/fine_tuning_cw10_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/fine_tuning_cw10/fine_tuning_cw10_v3_v1_500k_seed4/evaluations.csv",
+    "name": "fine_tuning_cw10_seed4",
+    "config": "configs/archived/fine_tuning_cw10/fine_tuning_cw10_seed4.json",
+    "evaluations": "results/evaluations/fine_tuning_cw10/fine_tuning_cw10_seed4/evaluations.csv",
     "original_device": "cpu",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "fine_tuning_cw10_v3_v1_500k_seed4"
   },
   {
     "group": "fine_tuning_cw10",
-    "name": "fine_tuning_cw10_v3_v1_500k_seed5",
-    "config": "configs/archived/fine_tuning_cw10/fine_tuning_cw10_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/fine_tuning_cw10/fine_tuning_cw10_v3_v1_500k_seed5/evaluations.csv",
+    "name": "fine_tuning_cw10_seed5",
+    "config": "configs/archived/fine_tuning_cw10/fine_tuning_cw10_seed5.json",
+    "evaluations": "results/evaluations/fine_tuning_cw10/fine_tuning_cw10_seed5/evaluations.csv",
     "original_device": "cpu",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "fine_tuning_cw10_v3_v1_500k_seed5"
   },
   {
     "group": "clonex_sac_cw10",
-    "name": "clonex_sac_cw10_v3_v1_500k_seed1",
-    "config": "configs/archived/clonex_sac_cw10/clonex_sac_cw10_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/clonex_sac_cw10/clonex_sac_cw10_v3_v1_500k_seed1/evaluations.csv",
+    "name": "clonex_sac_cw10_seed1",
+    "config": "configs/archived/clonex_sac_cw10/clonex_sac_cw10_seed1.json",
+    "evaluations": "results/evaluations/clonex_sac_cw10/clonex_sac_cw10_seed1/evaluations.csv",
     "original_device": "cpu",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "clonex_sac_cw10_v3_v1_500k_seed1"
   },
   {
     "group": "clonex_sac_cw10",
-    "name": "clonex_sac_cw10_v3_v1_500k_seed2",
-    "config": "configs/archived/clonex_sac_cw10/clonex_sac_cw10_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/clonex_sac_cw10/clonex_sac_cw10_v3_v1_500k_seed2/evaluations.csv",
+    "name": "clonex_sac_cw10_seed2",
+    "config": "configs/archived/clonex_sac_cw10/clonex_sac_cw10_seed2.json",
+    "evaluations": "results/evaluations/clonex_sac_cw10/clonex_sac_cw10_seed2/evaluations.csv",
     "original_device": "cpu",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "clonex_sac_cw10_v3_v1_500k_seed2"
   },
   {
     "group": "clonex_sac_cw10",
-    "name": "clonex_sac_cw10_v3_v1_500k_seed3",
-    "config": "configs/archived/clonex_sac_cw10/clonex_sac_cw10_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/clonex_sac_cw10/clonex_sac_cw10_v3_v1_500k_seed3/evaluations.csv",
+    "name": "clonex_sac_cw10_seed3",
+    "config": "configs/archived/clonex_sac_cw10/clonex_sac_cw10_seed3.json",
+    "evaluations": "results/evaluations/clonex_sac_cw10/clonex_sac_cw10_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "clonex_sac_cw10_v3_v1_500k_seed3"
   },
   {
     "group": "clonex_sac_cw10",
-    "name": "clonex_sac_cw10_v3_v1_500k_seed4",
-    "config": "configs/archived/clonex_sac_cw10/clonex_sac_cw10_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/clonex_sac_cw10/clonex_sac_cw10_v3_v1_500k_seed4/evaluations.csv",
+    "name": "clonex_sac_cw10_seed4",
+    "config": "configs/archived/clonex_sac_cw10/clonex_sac_cw10_seed4.json",
+    "evaluations": "results/evaluations/clonex_sac_cw10/clonex_sac_cw10_seed4/evaluations.csv",
     "original_device": "cpu",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "clonex_sac_cw10_v3_v1_500k_seed4"
   },
   {
     "group": "clonex_sac_cw10",
-    "name": "clonex_sac_cw10_v3_v1_500k_seed5",
-    "config": "configs/archived/clonex_sac_cw10/clonex_sac_cw10_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/clonex_sac_cw10/clonex_sac_cw10_v3_v1_500k_seed5/evaluations.csv",
+    "name": "clonex_sac_cw10_seed5",
+    "config": "configs/archived/clonex_sac_cw10/clonex_sac_cw10_seed5.json",
+    "evaluations": "results/evaluations/clonex_sac_cw10/clonex_sac_cw10_seed5/evaluations.csv",
     "original_device": "cpu",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "clonex_sac_cw10_v3_v1_500k_seed5"
   },
   {
     "group": "recall_cw10",
-    "name": "recall_cw10_v3_v1_500k_seed1",
-    "config": "configs/archived/recall_cw10/recall_cw10_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/recall_cw10/recall_cw10_v3_v1_500k_seed1/evaluations.csv",
+    "name": "recall_cw10_seed1",
+    "config": "configs/archived/recall_cw10/recall_cw10_seed1.json",
+    "evaluations": "results/evaluations/recall_cw10/recall_cw10_seed1/evaluations.csv",
     "original_device": "cpu",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "recall_cw10_v3_v1_500k_seed1"
   },
   {
     "group": "recall_cw10",
-    "name": "recall_cw10_v3_v1_500k_seed2",
-    "config": "configs/archived/recall_cw10/recall_cw10_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/recall_cw10/recall_cw10_v3_v1_500k_seed2/evaluations.csv",
+    "name": "recall_cw10_seed2",
+    "config": "configs/archived/recall_cw10/recall_cw10_seed2.json",
+    "evaluations": "results/evaluations/recall_cw10/recall_cw10_seed2/evaluations.csv",
     "original_device": "cpu",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "recall_cw10_v3_v1_500k_seed2"
   },
   {
     "group": "recall_cw10",
-    "name": "recall_cw10_v3_v1_500k_seed3",
-    "config": "configs/archived/recall_cw10/recall_cw10_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/recall_cw10/recall_cw10_v3_v1_500k_seed3/evaluations.csv",
+    "name": "recall_cw10_seed3",
+    "config": "configs/archived/recall_cw10/recall_cw10_seed3.json",
+    "evaluations": "results/evaluations/recall_cw10/recall_cw10_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "recall_cw10_v3_v1_500k_seed3"
   },
   {
     "group": "recall_cw10",
-    "name": "recall_cw10_v3_v1_500k_seed4",
-    "config": "configs/archived/recall_cw10/recall_cw10_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/recall_cw10/recall_cw10_v3_v1_500k_seed4/evaluations.csv",
+    "name": "recall_cw10_seed4",
+    "config": "configs/archived/recall_cw10/recall_cw10_seed4.json",
+    "evaluations": "results/evaluations/recall_cw10/recall_cw10_seed4/evaluations.csv",
     "original_device": "cpu",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "recall_cw10_v3_v1_500k_seed4"
   },
   {
     "group": "recall_cw10",
-    "name": "recall_cw10_v3_v1_500k_seed5",
-    "config": "configs/archived/recall_cw10/recall_cw10_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/recall_cw10/recall_cw10_v3_v1_500k_seed5/evaluations.csv",
+    "name": "recall_cw10_seed5",
+    "config": "configs/archived/recall_cw10/recall_cw10_seed5.json",
+    "evaluations": "results/evaluations/recall_cw10/recall_cw10_seed5/evaluations.csv",
     "original_device": "cpu",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "recall_cw10_v3_v1_500k_seed5"
   },
   {
     "group": "packnet_cw10",
-    "name": "packnet_cw10_v3_v1_500k_seed1",
-    "config": "configs/archived/packnet_cw10/packnet_cw10_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/packnet_cw10/packnet_cw10_v3_v1_500k_seed1/evaluations.csv",
+    "name": "packnet_cw10_seed1",
+    "config": "configs/archived/packnet_cw10/packnet_cw10_seed1.json",
+    "evaluations": "results/evaluations/packnet_cw10/packnet_cw10_seed1/evaluations.csv",
     "original_device": "cuda",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "packnet_cw10_v3_v1_500k_seed1"
   },
   {
     "group": "packnet_cw10",
-    "name": "packnet_cw10_v3_v1_500k_seed2",
-    "config": "configs/archived/packnet_cw10/packnet_cw10_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/packnet_cw10/packnet_cw10_v3_v1_500k_seed2/evaluations.csv",
+    "name": "packnet_cw10_seed2",
+    "config": "configs/archived/packnet_cw10/packnet_cw10_seed2.json",
+    "evaluations": "results/evaluations/packnet_cw10/packnet_cw10_seed2/evaluations.csv",
     "original_device": "cuda",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "packnet_cw10_v3_v1_500k_seed2"
   },
   {
     "group": "packnet_cw10",
-    "name": "packnet_cw10_v3_v1_500k_seed3",
-    "config": "configs/archived/packnet_cw10/packnet_cw10_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/packnet_cw10/packnet_cw10_v3_v1_500k_seed3/evaluations.csv",
+    "name": "packnet_cw10_seed3",
+    "config": "configs/archived/packnet_cw10/packnet_cw10_seed3.json",
+    "evaluations": "results/evaluations/packnet_cw10/packnet_cw10_seed3/evaluations.csv",
     "original_device": "cuda",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "packnet_cw10_v3_v1_500k_seed3"
   },
   {
     "group": "packnet_cw10",
-    "name": "packnet_cw10_v3_v1_500k_seed4",
-    "config": "configs/archived/packnet_cw10/packnet_cw10_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/packnet_cw10/packnet_cw10_v3_v1_500k_seed4/evaluations.csv",
+    "name": "packnet_cw10_seed4",
+    "config": "configs/archived/packnet_cw10/packnet_cw10_seed4.json",
+    "evaluations": "results/evaluations/packnet_cw10/packnet_cw10_seed4/evaluations.csv",
     "original_device": "cuda",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "packnet_cw10_v3_v1_500k_seed4"
   },
   {
     "group": "packnet_cw10",
-    "name": "packnet_cw10_v3_v1_500k_seed5",
-    "config": "configs/archived/packnet_cw10/packnet_cw10_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/packnet_cw10/packnet_cw10_v3_v1_500k_seed5/evaluations.csv",
+    "name": "packnet_cw10_seed5",
+    "config": "configs/archived/packnet_cw10/packnet_cw10_seed5.json",
+    "evaluations": "results/evaluations/packnet_cw10/packnet_cw10_seed5/evaluations.csv",
     "original_device": "cuda",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "packnet_cw10_v3_v1_500k_seed5"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw10",
-    "name": "success_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed1",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw10/success_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw10/success_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed1/evaluations.csv",
+    "group": "cable_cw10",
+    "name": "cable_cw10_seed1",
+    "config": "configs/archived/cable_cw10/cable_cw10_seed1.json",
+    "evaluations": "results/evaluations/cable_cw10/cable_cw10_seed1/evaluations.csv",
     "original_device": "cpu",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed1"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw10",
-    "name": "success_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed2",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw10/success_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw10/success_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed2/evaluations.csv",
+    "group": "cable_cw10",
+    "name": "cable_cw10_seed2",
+    "config": "configs/archived/cable_cw10/cable_cw10_seed2.json",
+    "evaluations": "results/evaluations/cable_cw10/cable_cw10_seed2/evaluations.csv",
     "original_device": "cpu",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed2"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw10",
-    "name": "success_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed3",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw10/success_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw10/success_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed3/evaluations.csv",
+    "group": "cable_cw10",
+    "name": "cable_cw10_seed3",
+    "config": "configs/archived/cable_cw10/cable_cw10_seed3.json",
+    "evaluations": "results/evaluations/cable_cw10/cable_cw10_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed3"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw10",
-    "name": "success_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed4",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw10/success_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw10/success_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed4/evaluations.csv",
+    "group": "cable_cw10",
+    "name": "cable_cw10_seed4",
+    "config": "configs/archived/cable_cw10/cable_cw10_seed4.json",
+    "evaluations": "results/evaluations/cable_cw10/cable_cw10_seed4/evaluations.csv",
     "original_device": "cpu",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed4"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw10",
-    "name": "success_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed5",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw10/success_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw10/success_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed5/evaluations.csv",
+    "group": "cable_cw10",
+    "name": "cable_cw10_seed5",
+    "config": "configs/archived/cable_cw10/cable_cw10_seed5.json",
+    "evaluations": "results/evaluations/cable_cw10/cable_cw10_seed5/evaluations.csv",
     "original_device": "cpu",
-    "seed": 5
-  },
-  {
-    "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_0_v3_v1_500k_seed1",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_0_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_0_v3_v1_500k_seed1/evaluations.csv",
-    "original_device": "cuda",
-    "seed": 1
-  },
-  {
-    "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_1_v3_v1_500k_seed1",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_1_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_1_v3_v1_500k_seed1/evaluations.csv",
-    "original_device": "cuda",
-    "seed": 1
+    "seed": 5,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed5"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_2_v3_v1_500k_seed1",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_2_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_2_v3_v1_500k_seed1/evaluations.csv",
+    "name": "fine_tuning_cw3_0_seed1",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_0_seed1.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_0_seed1/evaluations.csv",
     "original_device": "cuda",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "fine_tuning_cw3_0_v3_v1_500k_seed1"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_3_v3_v1_500k_seed1",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_3_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_3_v3_v1_500k_seed1/evaluations.csv",
+    "name": "fine_tuning_cw3_1_seed1",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_1_seed1.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_1_seed1/evaluations.csv",
     "original_device": "cuda",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "fine_tuning_cw3_1_v3_v1_500k_seed1"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_4_v3_v1_500k_seed1",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_4_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_4_v3_v1_500k_seed1/evaluations.csv",
+    "name": "fine_tuning_cw3_2_seed1",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_2_seed1.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_2_seed1/evaluations.csv",
     "original_device": "cuda",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "fine_tuning_cw3_2_v3_v1_500k_seed1"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_5_v3_v1_500k_seed1",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_5_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_5_v3_v1_500k_seed1/evaluations.csv",
+    "name": "fine_tuning_cw3_3_seed1",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_3_seed1.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_3_seed1/evaluations.csv",
     "original_device": "cuda",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "fine_tuning_cw3_3_v3_v1_500k_seed1"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_6_v3_v1_500k_seed1",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_6_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_6_v3_v1_500k_seed1/evaluations.csv",
+    "name": "fine_tuning_cw3_4_seed1",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_4_seed1.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_4_seed1/evaluations.csv",
     "original_device": "cuda",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "fine_tuning_cw3_4_v3_v1_500k_seed1"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_7_v3_v1_500k_seed1",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_7_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_7_v3_v1_500k_seed1/evaluations.csv",
+    "name": "fine_tuning_cw3_5_seed1",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_5_seed1.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_5_seed1/evaluations.csv",
     "original_device": "cuda",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "fine_tuning_cw3_5_v3_v1_500k_seed1"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_0_v3_v1_500k_seed2",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_0_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_0_v3_v1_500k_seed2/evaluations.csv",
+    "name": "fine_tuning_cw3_6_seed1",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_6_seed1.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_6_seed1/evaluations.csv",
     "original_device": "cuda",
-    "seed": 2
+    "seed": 1,
+    "original_run_name": "fine_tuning_cw3_6_v3_v1_500k_seed1"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_1_v3_v1_500k_seed2",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_1_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_1_v3_v1_500k_seed2/evaluations.csv",
+    "name": "fine_tuning_cw3_7_seed1",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_7_seed1.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_7_seed1/evaluations.csv",
     "original_device": "cuda",
-    "seed": 2
+    "seed": 1,
+    "original_run_name": "fine_tuning_cw3_7_v3_v1_500k_seed1"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_2_v3_v1_500k_seed2",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_2_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_2_v3_v1_500k_seed2/evaluations.csv",
+    "name": "fine_tuning_cw3_0_seed2",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_0_seed2.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_0_seed2/evaluations.csv",
     "original_device": "cuda",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "fine_tuning_cw3_0_v3_v1_500k_seed2"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_3_v3_v1_500k_seed2",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_3_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_3_v3_v1_500k_seed2/evaluations.csv",
+    "name": "fine_tuning_cw3_1_seed2",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_1_seed2.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_1_seed2/evaluations.csv",
     "original_device": "cuda",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "fine_tuning_cw3_1_v3_v1_500k_seed2"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_4_v3_v1_500k_seed2",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_4_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_4_v3_v1_500k_seed2/evaluations.csv",
+    "name": "fine_tuning_cw3_2_seed2",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_2_seed2.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_2_seed2/evaluations.csv",
     "original_device": "cuda",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "fine_tuning_cw3_2_v3_v1_500k_seed2"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_5_v3_v1_500k_seed2",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_5_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_5_v3_v1_500k_seed2/evaluations.csv",
+    "name": "fine_tuning_cw3_3_seed2",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_3_seed2.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_3_seed2/evaluations.csv",
     "original_device": "cuda",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "fine_tuning_cw3_3_v3_v1_500k_seed2"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_6_v3_v1_500k_seed2",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_6_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_6_v3_v1_500k_seed2/evaluations.csv",
+    "name": "fine_tuning_cw3_4_seed2",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_4_seed2.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_4_seed2/evaluations.csv",
     "original_device": "cuda",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "fine_tuning_cw3_4_v3_v1_500k_seed2"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_7_v3_v1_500k_seed2",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_7_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_7_v3_v1_500k_seed2/evaluations.csv",
+    "name": "fine_tuning_cw3_5_seed2",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_5_seed2.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_5_seed2/evaluations.csv",
     "original_device": "cuda",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "fine_tuning_cw3_5_v3_v1_500k_seed2"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_0_v3_v1_500k_seed3",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_0_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_0_v3_v1_500k_seed3/evaluations.csv",
-    "original_device": "cpu",
-    "seed": 3
+    "name": "fine_tuning_cw3_6_seed2",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_6_seed2.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_6_seed2/evaluations.csv",
+    "original_device": "cuda",
+    "seed": 2,
+    "original_run_name": "fine_tuning_cw3_6_v3_v1_500k_seed2"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_1_v3_v1_500k_seed3",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_1_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_1_v3_v1_500k_seed3/evaluations.csv",
-    "original_device": "cpu",
-    "seed": 3
+    "name": "fine_tuning_cw3_7_seed2",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_7_seed2.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_7_seed2/evaluations.csv",
+    "original_device": "cuda",
+    "seed": 2,
+    "original_run_name": "fine_tuning_cw3_7_v3_v1_500k_seed2"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_2_v3_v1_500k_seed3",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_2_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_2_v3_v1_500k_seed3/evaluations.csv",
+    "name": "fine_tuning_cw3_0_seed3",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_0_seed3.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_0_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "fine_tuning_cw3_0_v3_v1_500k_seed3"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_3_v3_v1_500k_seed3",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_3_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_3_v3_v1_500k_seed3/evaluations.csv",
+    "name": "fine_tuning_cw3_1_seed3",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_1_seed3.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_1_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "fine_tuning_cw3_1_v3_v1_500k_seed3"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_4_v3_v1_500k_seed3",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_4_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_4_v3_v1_500k_seed3/evaluations.csv",
+    "name": "fine_tuning_cw3_2_seed3",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_2_seed3.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_2_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "fine_tuning_cw3_2_v3_v1_500k_seed3"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_5_v3_v1_500k_seed3",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_5_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_5_v3_v1_500k_seed3/evaluations.csv",
+    "name": "fine_tuning_cw3_3_seed3",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_3_seed3.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_3_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "fine_tuning_cw3_3_v3_v1_500k_seed3"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_6_v3_v1_500k_seed3",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_6_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_6_v3_v1_500k_seed3/evaluations.csv",
+    "name": "fine_tuning_cw3_4_seed3",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_4_seed3.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_4_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "fine_tuning_cw3_4_v3_v1_500k_seed3"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_7_v3_v1_500k_seed3",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_7_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_7_v3_v1_500k_seed3/evaluations.csv",
+    "name": "fine_tuning_cw3_5_seed3",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_5_seed3.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_5_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "fine_tuning_cw3_5_v3_v1_500k_seed3"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_0_v3_v1_500k_seed4",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_0_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_0_v3_v1_500k_seed4/evaluations.csv",
-    "original_device": "cuda",
-    "seed": 4
+    "name": "fine_tuning_cw3_6_seed3",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_6_seed3.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_6_seed3/evaluations.csv",
+    "original_device": "cpu",
+    "seed": 3,
+    "original_run_name": "fine_tuning_cw3_6_v3_v1_500k_seed3"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_1_v3_v1_500k_seed4",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_1_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_1_v3_v1_500k_seed4/evaluations.csv",
-    "original_device": "cuda",
-    "seed": 4
+    "name": "fine_tuning_cw3_7_seed3",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_7_seed3.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_7_seed3/evaluations.csv",
+    "original_device": "cpu",
+    "seed": 3,
+    "original_run_name": "fine_tuning_cw3_7_v3_v1_500k_seed3"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_2_v3_v1_500k_seed4",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_2_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_2_v3_v1_500k_seed4/evaluations.csv",
+    "name": "fine_tuning_cw3_0_seed4",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_0_seed4.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_0_seed4/evaluations.csv",
     "original_device": "cuda",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "fine_tuning_cw3_0_v3_v1_500k_seed4"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_3_v3_v1_500k_seed4",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_3_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_3_v3_v1_500k_seed4/evaluations.csv",
+    "name": "fine_tuning_cw3_1_seed4",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_1_seed4.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_1_seed4/evaluations.csv",
     "original_device": "cuda",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "fine_tuning_cw3_1_v3_v1_500k_seed4"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_4_v3_v1_500k_seed4",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_4_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_4_v3_v1_500k_seed4/evaluations.csv",
+    "name": "fine_tuning_cw3_2_seed4",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_2_seed4.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_2_seed4/evaluations.csv",
     "original_device": "cuda",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "fine_tuning_cw3_2_v3_v1_500k_seed4"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_5_v3_v1_500k_seed4",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_5_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_5_v3_v1_500k_seed4/evaluations.csv",
+    "name": "fine_tuning_cw3_3_seed4",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_3_seed4.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_3_seed4/evaluations.csv",
     "original_device": "cuda",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "fine_tuning_cw3_3_v3_v1_500k_seed4"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_6_v3_v1_500k_seed4",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_6_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_6_v3_v1_500k_seed4/evaluations.csv",
+    "name": "fine_tuning_cw3_4_seed4",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_4_seed4.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_4_seed4/evaluations.csv",
     "original_device": "cuda",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "fine_tuning_cw3_4_v3_v1_500k_seed4"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_7_v3_v1_500k_seed4",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_7_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_7_v3_v1_500k_seed4/evaluations.csv",
+    "name": "fine_tuning_cw3_5_seed4",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_5_seed4.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_5_seed4/evaluations.csv",
     "original_device": "cuda",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "fine_tuning_cw3_5_v3_v1_500k_seed4"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_0_v3_v1_500k_seed5",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_0_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_0_v3_v1_500k_seed5/evaluations.csv",
+    "name": "fine_tuning_cw3_6_seed4",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_6_seed4.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_6_seed4/evaluations.csv",
     "original_device": "cuda",
-    "seed": 5
+    "seed": 4,
+    "original_run_name": "fine_tuning_cw3_6_v3_v1_500k_seed4"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_1_v3_v1_500k_seed5",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_1_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_1_v3_v1_500k_seed5/evaluations.csv",
+    "name": "fine_tuning_cw3_7_seed4",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_7_seed4.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_7_seed4/evaluations.csv",
     "original_device": "cuda",
-    "seed": 5
+    "seed": 4,
+    "original_run_name": "fine_tuning_cw3_7_v3_v1_500k_seed4"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_2_v3_v1_500k_seed5",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_2_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_2_v3_v1_500k_seed5/evaluations.csv",
+    "name": "fine_tuning_cw3_0_seed5",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_0_seed5.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_0_seed5/evaluations.csv",
     "original_device": "cuda",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "fine_tuning_cw3_0_v3_v1_500k_seed5"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_3_v3_v1_500k_seed5",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_3_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_3_v3_v1_500k_seed5/evaluations.csv",
+    "name": "fine_tuning_cw3_1_seed5",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_1_seed5.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_1_seed5/evaluations.csv",
     "original_device": "cuda",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "fine_tuning_cw3_1_v3_v1_500k_seed5"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_4_v3_v1_500k_seed5",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_4_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_4_v3_v1_500k_seed5/evaluations.csv",
+    "name": "fine_tuning_cw3_2_seed5",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_2_seed5.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_2_seed5/evaluations.csv",
     "original_device": "cuda",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "fine_tuning_cw3_2_v3_v1_500k_seed5"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_5_v3_v1_500k_seed5",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_5_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_5_v3_v1_500k_seed5/evaluations.csv",
+    "name": "fine_tuning_cw3_3_seed5",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_3_seed5.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_3_seed5/evaluations.csv",
     "original_device": "cuda",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "fine_tuning_cw3_3_v3_v1_500k_seed5"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_6_v3_v1_500k_seed5",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_6_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_6_v3_v1_500k_seed5/evaluations.csv",
+    "name": "fine_tuning_cw3_4_seed5",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_4_seed5.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_4_seed5/evaluations.csv",
     "original_device": "cuda",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "fine_tuning_cw3_4_v3_v1_500k_seed5"
   },
   {
     "group": "fine_tuning_cw3",
-    "name": "fine_tuning_cw3_7_v3_v1_500k_seed5",
-    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_7_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_7_v3_v1_500k_seed5/evaluations.csv",
+    "name": "fine_tuning_cw3_5_seed5",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_5_seed5.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_5_seed5/evaluations.csv",
     "original_device": "cuda",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "fine_tuning_cw3_5_v3_v1_500k_seed5"
+  },
+  {
+    "group": "fine_tuning_cw3",
+    "name": "fine_tuning_cw3_6_seed5",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_6_seed5.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_6_seed5/evaluations.csv",
+    "original_device": "cuda",
+    "seed": 5,
+    "original_run_name": "fine_tuning_cw3_6_v3_v1_500k_seed5"
+  },
+  {
+    "group": "fine_tuning_cw3",
+    "name": "fine_tuning_cw3_7_seed5",
+    "config": "configs/archived/fine_tuning_cw3/fine_tuning_cw3_7_seed5.json",
+    "evaluations": "results/evaluations/fine_tuning_cw3/fine_tuning_cw3_7_seed5/evaluations.csv",
+    "original_device": "cuda",
+    "seed": 5,
+    "original_run_name": "fine_tuning_cw3_7_v3_v1_500k_seed5"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_0_v3_v1_500k_seed1",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_0_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_0_v3_v1_500k_seed1/evaluations.csv",
+    "name": "clonex_sac_cw3_0_seed1",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_0_seed1.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_0_seed1/evaluations.csv",
     "original_device": "cpu",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "clonex_sac_cw3_0_v3_v1_500k_seed1"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_1_v3_v1_500k_seed1",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_1_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_1_v3_v1_500k_seed1/evaluations.csv",
+    "name": "clonex_sac_cw3_1_seed1",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_1_seed1.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_1_seed1/evaluations.csv",
     "original_device": "cpu",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "clonex_sac_cw3_1_v3_v1_500k_seed1"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_2_v3_v1_500k_seed1",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_2_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_2_v3_v1_500k_seed1/evaluations.csv",
+    "name": "clonex_sac_cw3_2_seed1",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_2_seed1.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_2_seed1/evaluations.csv",
     "original_device": "cpu",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "clonex_sac_cw3_2_v3_v1_500k_seed1"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_3_v3_v1_500k_seed1",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_3_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_3_v3_v1_500k_seed1/evaluations.csv",
+    "name": "clonex_sac_cw3_3_seed1",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_3_seed1.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_3_seed1/evaluations.csv",
     "original_device": "cpu",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "clonex_sac_cw3_3_v3_v1_500k_seed1"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_4_v3_v1_500k_seed1",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_4_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_4_v3_v1_500k_seed1/evaluations.csv",
+    "name": "clonex_sac_cw3_4_seed1",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_4_seed1.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_4_seed1/evaluations.csv",
     "original_device": "cpu",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "clonex_sac_cw3_4_v3_v1_500k_seed1"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_5_v3_v1_500k_seed1",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_5_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_5_v3_v1_500k_seed1/evaluations.csv",
+    "name": "clonex_sac_cw3_5_seed1",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_5_seed1.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_5_seed1/evaluations.csv",
     "original_device": "cpu",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "clonex_sac_cw3_5_v3_v1_500k_seed1"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_6_v3_v1_500k_seed1",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_6_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_6_v3_v1_500k_seed1/evaluations.csv",
+    "name": "clonex_sac_cw3_6_seed1",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_6_seed1.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_6_seed1/evaluations.csv",
     "original_device": "cpu",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "clonex_sac_cw3_6_v3_v1_500k_seed1"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_7_v3_v1_500k_seed1",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_7_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_7_v3_v1_500k_seed1/evaluations.csv",
+    "name": "clonex_sac_cw3_7_seed1",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_7_seed1.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_7_seed1/evaluations.csv",
     "original_device": "cpu",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "clonex_sac_cw3_7_v3_v1_500k_seed1"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_0_v3_v1_500k_seed2",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_0_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_0_v3_v1_500k_seed2/evaluations.csv",
+    "name": "clonex_sac_cw3_0_seed2",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_0_seed2.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_0_seed2/evaluations.csv",
     "original_device": "cpu",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "clonex_sac_cw3_0_v3_v1_500k_seed2"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_1_v3_v1_500k_seed2",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_1_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_1_v3_v1_500k_seed2/evaluations.csv",
+    "name": "clonex_sac_cw3_1_seed2",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_1_seed2.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_1_seed2/evaluations.csv",
     "original_device": "cpu",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "clonex_sac_cw3_1_v3_v1_500k_seed2"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_2_v3_v1_500k_seed2",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_2_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_2_v3_v1_500k_seed2/evaluations.csv",
+    "name": "clonex_sac_cw3_2_seed2",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_2_seed2.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_2_seed2/evaluations.csv",
     "original_device": "cpu",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "clonex_sac_cw3_2_v3_v1_500k_seed2"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_3_v3_v1_500k_seed2",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_3_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_3_v3_v1_500k_seed2/evaluations.csv",
+    "name": "clonex_sac_cw3_3_seed2",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_3_seed2.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_3_seed2/evaluations.csv",
     "original_device": "cpu",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "clonex_sac_cw3_3_v3_v1_500k_seed2"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_4_v3_v1_500k_seed2",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_4_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_4_v3_v1_500k_seed2/evaluations.csv",
+    "name": "clonex_sac_cw3_4_seed2",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_4_seed2.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_4_seed2/evaluations.csv",
     "original_device": "cpu",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "clonex_sac_cw3_4_v3_v1_500k_seed2"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_5_v3_v1_500k_seed2",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_5_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_5_v3_v1_500k_seed2/evaluations.csv",
+    "name": "clonex_sac_cw3_5_seed2",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_5_seed2.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_5_seed2/evaluations.csv",
     "original_device": "cpu",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "clonex_sac_cw3_5_v3_v1_500k_seed2"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_6_v3_v1_500k_seed2",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_6_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_6_v3_v1_500k_seed2/evaluations.csv",
+    "name": "clonex_sac_cw3_6_seed2",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_6_seed2.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_6_seed2/evaluations.csv",
     "original_device": "cpu",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "clonex_sac_cw3_6_v3_v1_500k_seed2"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_7_v3_v1_500k_seed2",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_7_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_7_v3_v1_500k_seed2/evaluations.csv",
+    "name": "clonex_sac_cw3_7_seed2",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_7_seed2.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_7_seed2/evaluations.csv",
     "original_device": "cpu",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "clonex_sac_cw3_7_v3_v1_500k_seed2"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_0_v3_v1_500k_seed3",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_0_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_0_v3_v1_500k_seed3/evaluations.csv",
+    "name": "clonex_sac_cw3_0_seed3",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_0_seed3.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_0_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "clonex_sac_cw3_0_v3_v1_500k_seed3"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_1_v3_v1_500k_seed3",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_1_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_1_v3_v1_500k_seed3/evaluations.csv",
+    "name": "clonex_sac_cw3_1_seed3",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_1_seed3.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_1_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "clonex_sac_cw3_1_v3_v1_500k_seed3"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_2_v3_v1_500k_seed3",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_2_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_2_v3_v1_500k_seed3/evaluations.csv",
+    "name": "clonex_sac_cw3_2_seed3",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_2_seed3.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_2_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "clonex_sac_cw3_2_v3_v1_500k_seed3"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_3_v3_v1_500k_seed3",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_3_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_3_v3_v1_500k_seed3/evaluations.csv",
+    "name": "clonex_sac_cw3_3_seed3",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_3_seed3.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_3_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "clonex_sac_cw3_3_v3_v1_500k_seed3"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_4_v3_v1_500k_seed3",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_4_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_4_v3_v1_500k_seed3/evaluations.csv",
+    "name": "clonex_sac_cw3_4_seed3",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_4_seed3.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_4_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "clonex_sac_cw3_4_v3_v1_500k_seed3"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_5_v3_v1_500k_seed3",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_5_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_5_v3_v1_500k_seed3/evaluations.csv",
+    "name": "clonex_sac_cw3_5_seed3",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_5_seed3.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_5_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "clonex_sac_cw3_5_v3_v1_500k_seed3"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_6_v3_v1_500k_seed3",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_6_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_6_v3_v1_500k_seed3/evaluations.csv",
+    "name": "clonex_sac_cw3_6_seed3",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_6_seed3.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_6_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "clonex_sac_cw3_6_v3_v1_500k_seed3"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_7_v3_v1_500k_seed3",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_7_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_7_v3_v1_500k_seed3/evaluations.csv",
+    "name": "clonex_sac_cw3_7_seed3",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_7_seed3.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_7_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "clonex_sac_cw3_7_v3_v1_500k_seed3"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_0_v3_v1_500k_seed4",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_0_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_0_v3_v1_500k_seed4/evaluations.csv",
+    "name": "clonex_sac_cw3_0_seed4",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_0_seed4.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_0_seed4/evaluations.csv",
     "original_device": "cpu",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "clonex_sac_cw3_0_v3_v1_500k_seed4"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_1_v3_v1_500k_seed4",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_1_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_1_v3_v1_500k_seed4/evaluations.csv",
+    "name": "clonex_sac_cw3_1_seed4",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_1_seed4.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_1_seed4/evaluations.csv",
     "original_device": "cpu",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "clonex_sac_cw3_1_v3_v1_500k_seed4"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_2_v3_v1_500k_seed4",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_2_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_2_v3_v1_500k_seed4/evaluations.csv",
+    "name": "clonex_sac_cw3_2_seed4",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_2_seed4.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_2_seed4/evaluations.csv",
     "original_device": "cpu",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "clonex_sac_cw3_2_v3_v1_500k_seed4"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_3_v3_v1_500k_seed4",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_3_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_3_v3_v1_500k_seed4/evaluations.csv",
+    "name": "clonex_sac_cw3_3_seed4",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_3_seed4.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_3_seed4/evaluations.csv",
     "original_device": "cpu",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "clonex_sac_cw3_3_v3_v1_500k_seed4"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_4_v3_v1_500k_seed4",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_4_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_4_v3_v1_500k_seed4/evaluations.csv",
+    "name": "clonex_sac_cw3_4_seed4",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_4_seed4.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_4_seed4/evaluations.csv",
     "original_device": "cpu",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "clonex_sac_cw3_4_v3_v1_500k_seed4"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_5_v3_v1_500k_seed4",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_5_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_5_v3_v1_500k_seed4/evaluations.csv",
+    "name": "clonex_sac_cw3_5_seed4",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_5_seed4.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_5_seed4/evaluations.csv",
     "original_device": "cpu",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "clonex_sac_cw3_5_v3_v1_500k_seed4"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_6_v3_v1_500k_seed4",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_6_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_6_v3_v1_500k_seed4/evaluations.csv",
+    "name": "clonex_sac_cw3_6_seed4",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_6_seed4.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_6_seed4/evaluations.csv",
     "original_device": "cpu",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "clonex_sac_cw3_6_v3_v1_500k_seed4"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_7_v3_v1_500k_seed4",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_7_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_7_v3_v1_500k_seed4/evaluations.csv",
+    "name": "clonex_sac_cw3_7_seed4",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_7_seed4.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_7_seed4/evaluations.csv",
     "original_device": "cpu",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "clonex_sac_cw3_7_v3_v1_500k_seed4"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_0_v3_v1_500k_seed5",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_0_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_0_v3_v1_500k_seed5/evaluations.csv",
+    "name": "clonex_sac_cw3_0_seed5",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_0_seed5.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_0_seed5/evaluations.csv",
     "original_device": "cpu",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "clonex_sac_cw3_0_v3_v1_500k_seed5"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_1_v3_v1_500k_seed5",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_1_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_1_v3_v1_500k_seed5/evaluations.csv",
+    "name": "clonex_sac_cw3_1_seed5",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_1_seed5.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_1_seed5/evaluations.csv",
     "original_device": "cpu",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "clonex_sac_cw3_1_v3_v1_500k_seed5"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_2_v3_v1_500k_seed5",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_2_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_2_v3_v1_500k_seed5/evaluations.csv",
+    "name": "clonex_sac_cw3_2_seed5",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_2_seed5.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_2_seed5/evaluations.csv",
     "original_device": "cpu",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "clonex_sac_cw3_2_v3_v1_500k_seed5"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_3_v3_v1_500k_seed5",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_3_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_3_v3_v1_500k_seed5/evaluations.csv",
+    "name": "clonex_sac_cw3_3_seed5",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_3_seed5.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_3_seed5/evaluations.csv",
     "original_device": "cpu",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "clonex_sac_cw3_3_v3_v1_500k_seed5"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_4_v3_v1_500k_seed5",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_4_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_4_v3_v1_500k_seed5/evaluations.csv",
+    "name": "clonex_sac_cw3_4_seed5",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_4_seed5.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_4_seed5/evaluations.csv",
     "original_device": "cpu",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "clonex_sac_cw3_4_v3_v1_500k_seed5"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_5_v3_v1_500k_seed5",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_5_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_5_v3_v1_500k_seed5/evaluations.csv",
+    "name": "clonex_sac_cw3_5_seed5",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_5_seed5.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_5_seed5/evaluations.csv",
     "original_device": "cpu",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "clonex_sac_cw3_5_v3_v1_500k_seed5"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_6_v3_v1_500k_seed5",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_6_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_6_v3_v1_500k_seed5/evaluations.csv",
+    "name": "clonex_sac_cw3_6_seed5",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_6_seed5.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_6_seed5/evaluations.csv",
     "original_device": "cpu",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "clonex_sac_cw3_6_v3_v1_500k_seed5"
   },
   {
     "group": "clonex_sac_cw3",
-    "name": "clonex_sac_cw3_7_v3_v1_500k_seed5",
-    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_7_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_7_v3_v1_500k_seed5/evaluations.csv",
+    "name": "clonex_sac_cw3_7_seed5",
+    "config": "configs/archived/clonex_sac_cw3/clonex_sac_cw3_7_seed5.json",
+    "evaluations": "results/evaluations/clonex_sac_cw3/clonex_sac_cw3_7_seed5/evaluations.csv",
     "original_device": "cpu",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "clonex_sac_cw3_7_v3_v1_500k_seed5"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_0_v3_v1_500k_seed1",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_0_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_0_v3_v1_500k_seed1/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_0_seed1",
+    "config": "configs/archived/cable_cw3/cable_cw3_0_seed1.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_0_seed1/evaluations.csv",
     "original_device": "cuda",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_0_v3_v1_500k_seed1"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_1_v3_v1_500k_seed1",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_1_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_1_v3_v1_500k_seed1/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_1_seed1",
+    "config": "configs/archived/cable_cw3/cable_cw3_1_seed1.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_1_seed1/evaluations.csv",
     "original_device": "cuda",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_1_v3_v1_500k_seed1"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_2_v3_v1_500k_seed1",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_2_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_2_v3_v1_500k_seed1/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_2_seed1",
+    "config": "configs/archived/cable_cw3/cable_cw3_2_seed1.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_2_seed1/evaluations.csv",
     "original_device": "cuda",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_2_v3_v1_500k_seed1"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_3_v3_v1_500k_seed1",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_3_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_3_v3_v1_500k_seed1/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_3_seed1",
+    "config": "configs/archived/cable_cw3/cable_cw3_3_seed1.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_3_seed1/evaluations.csv",
     "original_device": "cuda",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_3_v3_v1_500k_seed1"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_4_v3_v1_500k_seed1",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_4_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_4_v3_v1_500k_seed1/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_4_seed1",
+    "config": "configs/archived/cable_cw3/cable_cw3_4_seed1.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_4_seed1/evaluations.csv",
     "original_device": "cuda",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_4_v3_v1_500k_seed1"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_5_v3_v1_500k_seed1",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_5_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_5_v3_v1_500k_seed1/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_5_seed1",
+    "config": "configs/archived/cable_cw3/cable_cw3_5_seed1.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_5_seed1/evaluations.csv",
     "original_device": "cuda",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_5_v3_v1_500k_seed1"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_6_v3_v1_500k_seed1",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_6_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_6_v3_v1_500k_seed1/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_6_seed1",
+    "config": "configs/archived/cable_cw3/cable_cw3_6_seed1.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_6_seed1/evaluations.csv",
     "original_device": "cuda",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_6_v3_v1_500k_seed1"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_7_v3_v1_500k_seed1",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_7_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_7_v3_v1_500k_seed1/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_7_seed1",
+    "config": "configs/archived/cable_cw3/cable_cw3_7_seed1.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_7_seed1/evaluations.csv",
     "original_device": "cuda",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_7_v3_v1_500k_seed1"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_0_v3_v1_500k_seed2",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_0_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_0_v3_v1_500k_seed2/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_0_seed2",
+    "config": "configs/archived/cable_cw3/cable_cw3_0_seed2.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_0_seed2/evaluations.csv",
     "original_device": "cuda",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_0_v3_v1_500k_seed2"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_1_v3_v1_500k_seed2",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_1_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_1_v3_v1_500k_seed2/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_1_seed2",
+    "config": "configs/archived/cable_cw3/cable_cw3_1_seed2.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_1_seed2/evaluations.csv",
     "original_device": "cuda",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_1_v3_v1_500k_seed2"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_2_v3_v1_500k_seed2",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_2_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_2_v3_v1_500k_seed2/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_2_seed2",
+    "config": "configs/archived/cable_cw3/cable_cw3_2_seed2.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_2_seed2/evaluations.csv",
     "original_device": "cuda",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_2_v3_v1_500k_seed2"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_3_v3_v1_500k_seed2",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_3_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_3_v3_v1_500k_seed2/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_3_seed2",
+    "config": "configs/archived/cable_cw3/cable_cw3_3_seed2.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_3_seed2/evaluations.csv",
     "original_device": "cuda",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_3_v3_v1_500k_seed2"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_4_v3_v1_500k_seed2",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_4_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_4_v3_v1_500k_seed2/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_4_seed2",
+    "config": "configs/archived/cable_cw3/cable_cw3_4_seed2.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_4_seed2/evaluations.csv",
     "original_device": "cuda",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_4_v3_v1_500k_seed2"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_5_v3_v1_500k_seed2",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_5_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_5_v3_v1_500k_seed2/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_5_seed2",
+    "config": "configs/archived/cable_cw3/cable_cw3_5_seed2.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_5_seed2/evaluations.csv",
     "original_device": "cuda",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_5_v3_v1_500k_seed2"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_6_v3_v1_500k_seed2",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_6_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_6_v3_v1_500k_seed2/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_6_seed2",
+    "config": "configs/archived/cable_cw3/cable_cw3_6_seed2.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_6_seed2/evaluations.csv",
     "original_device": "cuda",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_6_v3_v1_500k_seed2"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_7_v3_v1_500k_seed2",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_7_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_7_v3_v1_500k_seed2/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_7_seed2",
+    "config": "configs/archived/cable_cw3/cable_cw3_7_seed2.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_7_seed2/evaluations.csv",
     "original_device": "cuda",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_7_v3_v1_500k_seed2"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_0_v3_v1_500k_seed3",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_0_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_0_v3_v1_500k_seed3/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_0_seed3",
+    "config": "configs/archived/cable_cw3/cable_cw3_0_seed3.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_0_seed3/evaluations.csv",
     "original_device": "cuda",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_0_v3_v1_500k_seed3"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_1_v3_v1_500k_seed3",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_1_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_1_v3_v1_500k_seed3/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_1_seed3",
+    "config": "configs/archived/cable_cw3/cable_cw3_1_seed3.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_1_seed3/evaluations.csv",
     "original_device": "cuda",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_1_v3_v1_500k_seed3"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_2_v3_v1_500k_seed3",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_2_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_2_v3_v1_500k_seed3/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_2_seed3",
+    "config": "configs/archived/cable_cw3/cable_cw3_2_seed3.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_2_seed3/evaluations.csv",
     "original_device": "cuda",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_2_v3_v1_500k_seed3"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_3_v3_v1_500k_seed3",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_3_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_3_v3_v1_500k_seed3/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_3_seed3",
+    "config": "configs/archived/cable_cw3/cable_cw3_3_seed3.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_3_seed3/evaluations.csv",
     "original_device": "cuda",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_3_v3_v1_500k_seed3"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_4_v3_v1_500k_seed3",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_4_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_4_v3_v1_500k_seed3/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_4_seed3",
+    "config": "configs/archived/cable_cw3/cable_cw3_4_seed3.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_4_seed3/evaluations.csv",
     "original_device": "cuda",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_4_v3_v1_500k_seed3"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_5_v3_v1_500k_seed3",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_5_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_5_v3_v1_500k_seed3/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_5_seed3",
+    "config": "configs/archived/cable_cw3/cable_cw3_5_seed3.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_5_seed3/evaluations.csv",
     "original_device": "cuda",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_5_v3_v1_500k_seed3"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_6_v3_v1_500k_seed3",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_6_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_6_v3_v1_500k_seed3/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_6_seed3",
+    "config": "configs/archived/cable_cw3/cable_cw3_6_seed3.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_6_seed3/evaluations.csv",
     "original_device": "cuda",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_6_v3_v1_500k_seed3"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_7_v3_v1_500k_seed3",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_7_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_7_v3_v1_500k_seed3/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_7_seed3",
+    "config": "configs/archived/cable_cw3/cable_cw3_7_seed3.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_7_seed3/evaluations.csv",
     "original_device": "cuda",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_7_v3_v1_500k_seed3"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_0_v3_v1_500k_seed4",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_0_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_0_v3_v1_500k_seed4/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_0_seed4",
+    "config": "configs/archived/cable_cw3/cable_cw3_0_seed4.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_0_seed4/evaluations.csv",
     "original_device": "cuda",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_0_v3_v1_500k_seed4"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_1_v3_v1_500k_seed4",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_1_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_1_v3_v1_500k_seed4/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_1_seed4",
+    "config": "configs/archived/cable_cw3/cable_cw3_1_seed4.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_1_seed4/evaluations.csv",
     "original_device": "cuda",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_1_v3_v1_500k_seed4"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_2_v3_v1_500k_seed4",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_2_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_2_v3_v1_500k_seed4/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_2_seed4",
+    "config": "configs/archived/cable_cw3/cable_cw3_2_seed4.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_2_seed4/evaluations.csv",
     "original_device": "cuda",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_2_v3_v1_500k_seed4"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_3_v3_v1_500k_seed4",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_3_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_3_v3_v1_500k_seed4/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_3_seed4",
+    "config": "configs/archived/cable_cw3/cable_cw3_3_seed4.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_3_seed4/evaluations.csv",
     "original_device": "cuda",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_3_v3_v1_500k_seed4"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_4_v3_v1_500k_seed4",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_4_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_4_v3_v1_500k_seed4/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_4_seed4",
+    "config": "configs/archived/cable_cw3/cable_cw3_4_seed4.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_4_seed4/evaluations.csv",
     "original_device": "cuda",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_4_v3_v1_500k_seed4"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_5_v3_v1_500k_seed4",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_5_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_5_v3_v1_500k_seed4/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_5_seed4",
+    "config": "configs/archived/cable_cw3/cable_cw3_5_seed4.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_5_seed4/evaluations.csv",
     "original_device": "cuda",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_5_v3_v1_500k_seed4"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_6_v3_v1_500k_seed4",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_6_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_6_v3_v1_500k_seed4/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_6_seed4",
+    "config": "configs/archived/cable_cw3/cable_cw3_6_seed4.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_6_seed4/evaluations.csv",
     "original_device": "cuda",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_6_v3_v1_500k_seed4"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_7_v3_v1_500k_seed4",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_7_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_7_v3_v1_500k_seed4/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_7_seed4",
+    "config": "configs/archived/cable_cw3/cable_cw3_7_seed4.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_7_seed4/evaluations.csv",
     "original_device": "cuda",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_7_v3_v1_500k_seed4"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_0_v3_v1_500k_seed5",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_0_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_0_v3_v1_500k_seed5/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_0_seed5",
+    "config": "configs/archived/cable_cw3/cable_cw3_0_seed5.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_0_seed5/evaluations.csv",
     "original_device": "cuda",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_0_v3_v1_500k_seed5"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_1_v3_v1_500k_seed5",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_1_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_1_v3_v1_500k_seed5/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_1_seed5",
+    "config": "configs/archived/cable_cw3/cable_cw3_1_seed5.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_1_seed5/evaluations.csv",
     "original_device": "cuda",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_1_v3_v1_500k_seed5"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_2_v3_v1_500k_seed5",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_2_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_2_v3_v1_500k_seed5/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_2_seed5",
+    "config": "configs/archived/cable_cw3/cable_cw3_2_seed5.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_2_seed5/evaluations.csv",
     "original_device": "cuda",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_2_v3_v1_500k_seed5"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_3_v3_v1_500k_seed5",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_3_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_3_v3_v1_500k_seed5/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_3_seed5",
+    "config": "configs/archived/cable_cw3/cable_cw3_3_seed5.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_3_seed5/evaluations.csv",
     "original_device": "cuda",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_3_v3_v1_500k_seed5"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_4_v3_v1_500k_seed5",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_4_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_4_v3_v1_500k_seed5/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_4_seed5",
+    "config": "configs/archived/cable_cw3/cable_cw3_4_seed5.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_4_seed5/evaluations.csv",
     "original_device": "cuda",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_4_v3_v1_500k_seed5"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_5_v3_v1_500k_seed5",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_5_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_5_v3_v1_500k_seed5/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_5_seed5",
+    "config": "configs/archived/cable_cw3/cable_cw3_5_seed5.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_5_seed5/evaluations.csv",
     "original_device": "cuda",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_5_v3_v1_500k_seed5"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_6_v3_v1_500k_seed5",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_6_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_6_v3_v1_500k_seed5/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_6_seed5",
+    "config": "configs/archived/cable_cw3/cable_cw3_6_seed5.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_6_seed5/evaluations.csv",
     "original_device": "cuda",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_6_v3_v1_500k_seed5"
   },
   {
-    "group": "success_replay_best_raw_pcgrad_projection_cw3",
-    "name": "success_replay_best_raw_pcgrad_projection_cw3_7_v3_v1_500k_seed5",
-    "config": "configs/archived/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_7_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/success_replay_best_raw_pcgrad_projection_cw3/success_replay_best_raw_pcgrad_projection_cw3_7_v3_v1_500k_seed5/evaluations.csv",
+    "group": "cable_cw3",
+    "name": "cable_cw3_7_seed5",
+    "config": "configs/archived/cable_cw3/cable_cw3_7_seed5.json",
+    "evaluations": "results/evaluations/cable_cw3/cable_cw3_7_seed5/evaluations.csv",
     "original_device": "cuda",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "success_replay_best_raw_pcgrad_projection_cw3_7_v3_v1_500k_seed5"
   },
   {
-    "group": "success_replay_best",
-    "name": "success_replay_best_cw10_v3_v1_500k_seed1",
-    "config": "configs/archived/success_replay_best/success_replay_best_cw10_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/success_replay_best/success_replay_best_cw10_v3_v1_500k_seed1/evaluations.csv",
+    "group": "no_projection_cw10",
+    "name": "no_projection_cw10_seed1",
+    "config": "configs/archived/no_projection_cw10/no_projection_cw10_seed1.json",
+    "evaluations": "results/evaluations/no_projection_cw10/no_projection_cw10_seed1/evaluations.csv",
     "original_device": "cpu",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "success_replay_best_cw10_v3_v1_500k_seed1"
   },
   {
-    "group": "success_replay_best",
-    "name": "success_replay_best_cw10_v3_v1_500k_seed2",
-    "config": "configs/archived/success_replay_best/success_replay_best_cw10_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/success_replay_best/success_replay_best_cw10_v3_v1_500k_seed2/evaluations.csv",
+    "group": "no_projection_cw10",
+    "name": "no_projection_cw10_seed2",
+    "config": "configs/archived/no_projection_cw10/no_projection_cw10_seed2.json",
+    "evaluations": "results/evaluations/no_projection_cw10/no_projection_cw10_seed2/evaluations.csv",
     "original_device": "cpu",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "success_replay_best_cw10_v3_v1_500k_seed2"
   },
   {
-    "group": "success_replay_best",
-    "name": "success_replay_best_cw10_v3_v1_500k_seed3",
-    "config": "configs/archived/success_replay_best/success_replay_best_cw10_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/success_replay_best/success_replay_best_cw10_v3_v1_500k_seed3/evaluations.csv",
+    "group": "no_projection_cw10",
+    "name": "no_projection_cw10_seed3",
+    "config": "configs/archived/no_projection_cw10/no_projection_cw10_seed3.json",
+    "evaluations": "results/evaluations/no_projection_cw10/no_projection_cw10_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "success_replay_best_cw10_v3_v1_500k_seed3"
   },
   {
-    "group": "success_replay_best",
-    "name": "success_replay_best_cw10_v3_v1_500k_seed4",
-    "config": "configs/archived/success_replay_best/success_replay_best_cw10_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/success_replay_best/success_replay_best_cw10_v3_v1_500k_seed4/evaluations.csv",
+    "group": "no_projection_cw10",
+    "name": "no_projection_cw10_seed4",
+    "config": "configs/archived/no_projection_cw10/no_projection_cw10_seed4.json",
+    "evaluations": "results/evaluations/no_projection_cw10/no_projection_cw10_seed4/evaluations.csv",
     "original_device": "cpu",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "success_replay_best_cw10_v3_v1_500k_seed4"
   },
   {
-    "group": "success_replay_best",
-    "name": "success_replay_best_cw10_v3_v1_500k_seed5",
-    "config": "configs/archived/success_replay_best/success_replay_best_cw10_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/success_replay_best/success_replay_best_cw10_v3_v1_500k_seed5/evaluations.csv",
+    "group": "no_projection_cw10",
+    "name": "no_projection_cw10_seed5",
+    "config": "configs/archived/no_projection_cw10/no_projection_cw10_seed5.json",
+    "evaluations": "results/evaluations/no_projection_cw10/no_projection_cw10_seed5/evaluations.csv",
     "original_device": "cpu",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "success_replay_best_cw10_v3_v1_500k_seed5"
   },
   {
-    "group": "success_replay_best_bc_priority_pcgrad",
-    "name": "success_replay_best_bc_priority_pcgrad_cw10_v3_v1_500k_seed1",
-    "config": "configs/archived/success_replay_best_bc_priority_pcgrad/success_replay_best_bc_priority_pcgrad_cw10_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/success_replay_best_bc_priority_pcgrad/success_replay_best_bc_priority_pcgrad_cw10_v3_v1_500k_seed1/evaluations.csv",
+    "group": "bc_priority_cw10",
+    "name": "bc_priority_cw10_seed1",
+    "config": "configs/archived/bc_priority_cw10/bc_priority_cw10_seed1.json",
+    "evaluations": "results/evaluations/bc_priority_cw10/bc_priority_cw10_seed1/evaluations.csv",
     "original_device": "cpu",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "success_replay_best_bc_priority_pcgrad_cw10_v3_v1_500k_seed1"
   },
   {
-    "group": "success_replay_best_bc_priority_pcgrad",
-    "name": "success_replay_best_bc_priority_pcgrad_cw10_v3_v1_500k_seed2",
-    "config": "configs/archived/success_replay_best_bc_priority_pcgrad/success_replay_best_bc_priority_pcgrad_cw10_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/success_replay_best_bc_priority_pcgrad/success_replay_best_bc_priority_pcgrad_cw10_v3_v1_500k_seed2/evaluations.csv",
+    "group": "bc_priority_cw10",
+    "name": "bc_priority_cw10_seed2",
+    "config": "configs/archived/bc_priority_cw10/bc_priority_cw10_seed2.json",
+    "evaluations": "results/evaluations/bc_priority_cw10/bc_priority_cw10_seed2/evaluations.csv",
     "original_device": "cpu",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "success_replay_best_bc_priority_pcgrad_cw10_v3_v1_500k_seed2"
   },
   {
-    "group": "success_replay_best_bc_priority_pcgrad",
-    "name": "success_replay_best_bc_priority_pcgrad_cw10_v3_v1_500k_seed3",
-    "config": "configs/archived/success_replay_best_bc_priority_pcgrad/success_replay_best_bc_priority_pcgrad_cw10_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/success_replay_best_bc_priority_pcgrad/success_replay_best_bc_priority_pcgrad_cw10_v3_v1_500k_seed3/evaluations.csv",
+    "group": "bc_priority_cw10",
+    "name": "bc_priority_cw10_seed3",
+    "config": "configs/archived/bc_priority_cw10/bc_priority_cw10_seed3.json",
+    "evaluations": "results/evaluations/bc_priority_cw10/bc_priority_cw10_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "success_replay_best_bc_priority_pcgrad_cw10_v3_v1_500k_seed3"
   },
   {
-    "group": "success_replay_best_bc_priority_pcgrad",
-    "name": "success_replay_best_bc_priority_pcgrad_cw10_v3_v1_500k_seed4",
-    "config": "configs/archived/success_replay_best_bc_priority_pcgrad/success_replay_best_bc_priority_pcgrad_cw10_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/success_replay_best_bc_priority_pcgrad/success_replay_best_bc_priority_pcgrad_cw10_v3_v1_500k_seed4/evaluations.csv",
+    "group": "bc_priority_cw10",
+    "name": "bc_priority_cw10_seed4",
+    "config": "configs/archived/bc_priority_cw10/bc_priority_cw10_seed4.json",
+    "evaluations": "results/evaluations/bc_priority_cw10/bc_priority_cw10_seed4/evaluations.csv",
     "original_device": "cpu",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "success_replay_best_bc_priority_pcgrad_cw10_v3_v1_500k_seed4"
   },
   {
-    "group": "success_replay_best_bc_priority_pcgrad",
-    "name": "success_replay_best_bc_priority_pcgrad_cw10_v3_v1_500k_seed5",
-    "config": "configs/archived/success_replay_best_bc_priority_pcgrad/success_replay_best_bc_priority_pcgrad_cw10_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/success_replay_best_bc_priority_pcgrad/success_replay_best_bc_priority_pcgrad_cw10_v3_v1_500k_seed5/evaluations.csv",
+    "group": "bc_priority_cw10",
+    "name": "bc_priority_cw10_seed5",
+    "config": "configs/archived/bc_priority_cw10/bc_priority_cw10_seed5.json",
+    "evaluations": "results/evaluations/bc_priority_cw10/bc_priority_cw10_seed5/evaluations.csv",
     "original_device": "cpu",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "success_replay_best_bc_priority_pcgrad_cw10_v3_v1_500k_seed5"
   },
   {
-    "group": "all_replay_best_raw_pcgrad_projection",
-    "name": "all_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed1",
-    "config": "configs/archived/all_replay_best_raw_pcgrad_projection/all_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/all_replay_best_raw_pcgrad_projection/all_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed1/evaluations.csv",
+    "group": "all_states_cw10",
+    "name": "all_states_cw10_seed1",
+    "config": "configs/archived/all_states_cw10/all_states_cw10_seed1.json",
+    "evaluations": "results/evaluations/all_states_cw10/all_states_cw10_seed1/evaluations.csv",
     "original_device": "cuda",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "all_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed1"
   },
   {
-    "group": "all_replay_best_raw_pcgrad_projection",
-    "name": "all_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed2",
-    "config": "configs/archived/all_replay_best_raw_pcgrad_projection/all_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/all_replay_best_raw_pcgrad_projection/all_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed2/evaluations.csv",
+    "group": "all_states_cw10",
+    "name": "all_states_cw10_seed2",
+    "config": "configs/archived/all_states_cw10/all_states_cw10_seed2.json",
+    "evaluations": "results/evaluations/all_states_cw10/all_states_cw10_seed2/evaluations.csv",
     "original_device": "cuda",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "all_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed2"
   },
   {
-    "group": "all_replay_best_raw_pcgrad_projection",
-    "name": "all_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed3",
-    "config": "configs/archived/all_replay_best_raw_pcgrad_projection/all_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/all_replay_best_raw_pcgrad_projection/all_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed3/evaluations.csv",
+    "group": "all_states_cw10",
+    "name": "all_states_cw10_seed3",
+    "config": "configs/archived/all_states_cw10/all_states_cw10_seed3.json",
+    "evaluations": "results/evaluations/all_states_cw10/all_states_cw10_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "all_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed3"
   },
   {
-    "group": "all_replay_best_raw_pcgrad_projection",
-    "name": "all_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed4_rerun",
-    "config": "configs/archived/all_replay_best_raw_pcgrad_projection/all_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed4_rerun.json",
-    "evaluations": "results/evaluations/all_replay_best_raw_pcgrad_projection/all_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed4_rerun/evaluations.csv",
+    "group": "all_states_cw10",
+    "name": "all_states_cw10_seed4",
+    "config": "configs/archived/all_states_cw10/all_states_cw10_seed4.json",
+    "evaluations": "results/evaluations/all_states_cw10/all_states_cw10_seed4/evaluations.csv",
     "original_device": "cpu",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "all_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed4_rerun"
   },
   {
-    "group": "all_replay_best_raw_pcgrad_projection",
-    "name": "all_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed5",
-    "config": "configs/archived/all_replay_best_raw_pcgrad_projection/all_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/all_replay_best_raw_pcgrad_projection/all_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed5/evaluations.csv",
+    "group": "all_states_cw10",
+    "name": "all_states_cw10_seed5",
+    "config": "configs/archived/all_states_cw10/all_states_cw10_seed5.json",
+    "evaluations": "results/evaluations/all_states_cw10/all_states_cw10_seed5/evaluations.csv",
     "original_device": "cuda",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "all_replay_best_raw_pcgrad_projection_cw10_v3_v1_500k_seed5"
   },
   {
-    "group": "success_replay_final_teacher_raw_pcgrad_projection",
-    "name": "success_replay_final_teacher_raw_pcgrad_projection_cw10_v3_v1_500k_cpu_rerun_seed1",
-    "config": "configs/archived/success_replay_final_teacher_raw_pcgrad_projection/success_replay_final_teacher_raw_pcgrad_projection_cw10_v3_v1_500k_cpu_rerun_seed1.json",
-    "evaluations": "results/evaluations/success_replay_final_teacher_raw_pcgrad_projection/success_replay_final_teacher_raw_pcgrad_projection_cw10_v3_v1_500k_cpu_rerun_seed1/evaluations.csv",
+    "group": "final_teacher_cw10",
+    "name": "final_teacher_cw10_seed1",
+    "config": "configs/archived/final_teacher_cw10/final_teacher_cw10_seed1.json",
+    "evaluations": "results/evaluations/final_teacher_cw10/final_teacher_cw10_seed1/evaluations.csv",
     "original_device": "cpu",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "success_replay_final_teacher_raw_pcgrad_projection_cw10_v3_v1_500k_cpu_rerun_seed1"
   },
   {
-    "group": "success_replay_final_teacher_raw_pcgrad_projection",
-    "name": "success_replay_final_teacher_raw_pcgrad_projection_cw10_v3_v1_500k_seed2",
-    "config": "configs/archived/success_replay_final_teacher_raw_pcgrad_projection/success_replay_final_teacher_raw_pcgrad_projection_cw10_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/success_replay_final_teacher_raw_pcgrad_projection/success_replay_final_teacher_raw_pcgrad_projection_cw10_v3_v1_500k_seed2/evaluations.csv",
+    "group": "final_teacher_cw10",
+    "name": "final_teacher_cw10_seed2",
+    "config": "configs/archived/final_teacher_cw10/final_teacher_cw10_seed2.json",
+    "evaluations": "results/evaluations/final_teacher_cw10/final_teacher_cw10_seed2/evaluations.csv",
     "original_device": "cpu",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "success_replay_final_teacher_raw_pcgrad_projection_cw10_v3_v1_500k_seed2"
   },
   {
-    "group": "success_replay_final_teacher_raw_pcgrad_projection",
-    "name": "success_replay_final_teacher_raw_pcgrad_projection_cw10_v3_v1_500k_seed3",
-    "config": "configs/archived/success_replay_final_teacher_raw_pcgrad_projection/success_replay_final_teacher_raw_pcgrad_projection_cw10_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/success_replay_final_teacher_raw_pcgrad_projection/success_replay_final_teacher_raw_pcgrad_projection_cw10_v3_v1_500k_seed3/evaluations.csv",
+    "group": "final_teacher_cw10",
+    "name": "final_teacher_cw10_seed3",
+    "config": "configs/archived/final_teacher_cw10/final_teacher_cw10_seed3.json",
+    "evaluations": "results/evaluations/final_teacher_cw10/final_teacher_cw10_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "success_replay_final_teacher_raw_pcgrad_projection_cw10_v3_v1_500k_seed3"
   },
   {
-    "group": "success_replay_final_teacher_raw_pcgrad_projection",
-    "name": "success_replay_final_teacher_raw_pcgrad_projection_cw10_v3_v1_500k_seed4",
-    "config": "configs/archived/success_replay_final_teacher_raw_pcgrad_projection/success_replay_final_teacher_raw_pcgrad_projection_cw10_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/success_replay_final_teacher_raw_pcgrad_projection/success_replay_final_teacher_raw_pcgrad_projection_cw10_v3_v1_500k_seed4/evaluations.csv",
+    "group": "final_teacher_cw10",
+    "name": "final_teacher_cw10_seed4",
+    "config": "configs/archived/final_teacher_cw10/final_teacher_cw10_seed4.json",
+    "evaluations": "results/evaluations/final_teacher_cw10/final_teacher_cw10_seed4/evaluations.csv",
     "original_device": "cpu",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "success_replay_final_teacher_raw_pcgrad_projection_cw10_v3_v1_500k_seed4"
   },
   {
-    "group": "success_replay_final_teacher_raw_pcgrad_projection",
-    "name": "success_replay_final_teacher_raw_pcgrad_projection_cw10_v3_v1_500k_seed5",
-    "config": "configs/archived/success_replay_final_teacher_raw_pcgrad_projection/success_replay_final_teacher_raw_pcgrad_projection_cw10_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/success_replay_final_teacher_raw_pcgrad_projection/success_replay_final_teacher_raw_pcgrad_projection_cw10_v3_v1_500k_seed5/evaluations.csv",
+    "group": "final_teacher_cw10",
+    "name": "final_teacher_cw10_seed5",
+    "config": "configs/archived/final_teacher_cw10/final_teacher_cw10_seed5.json",
+    "evaluations": "results/evaluations/final_teacher_cw10/final_teacher_cw10_seed5/evaluations.csv",
     "original_device": "cpu",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "success_replay_final_teacher_raw_pcgrad_projection_cw10_v3_v1_500k_seed5"
   },
   {
     "group": "cable_lambda_bc10",
-    "name": "cable_lambda_bc10_cw10_v3_v1_500k_seed1",
-    "config": "configs/archived/cable_lambda_bc10/cable_lambda_bc10_cw10_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/cable_lambda_bc10/cable_lambda_bc10_cw10_v3_v1_500k_seed1/evaluations.csv",
+    "name": "cable_lambda_bc10_cw10_seed1",
+    "config": "configs/archived/cable_lambda_bc10/cable_lambda_bc10_cw10_seed1.json",
+    "evaluations": "results/evaluations/cable_lambda_bc10/cable_lambda_bc10_cw10_seed1/evaluations.csv",
     "original_device": "cpu",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "cable_lambda_bc10_cw10_v3_v1_500k_seed1"
   },
   {
     "group": "cable_lambda_bc10",
-    "name": "cable_lambda_bc10_cw10_v3_v1_500k_seed2",
-    "config": "configs/archived/cable_lambda_bc10/cable_lambda_bc10_cw10_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/cable_lambda_bc10/cable_lambda_bc10_cw10_v3_v1_500k_seed2/evaluations.csv",
+    "name": "cable_lambda_bc10_cw10_seed2",
+    "config": "configs/archived/cable_lambda_bc10/cable_lambda_bc10_cw10_seed2.json",
+    "evaluations": "results/evaluations/cable_lambda_bc10/cable_lambda_bc10_cw10_seed2/evaluations.csv",
     "original_device": "cpu",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "cable_lambda_bc10_cw10_v3_v1_500k_seed2"
   },
   {
     "group": "cable_lambda_bc10",
-    "name": "cable_lambda_bc10_cw10_v3_v1_500k_seed3",
-    "config": "configs/archived/cable_lambda_bc10/cable_lambda_bc10_cw10_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/cable_lambda_bc10/cable_lambda_bc10_cw10_v3_v1_500k_seed3/evaluations.csv",
+    "name": "cable_lambda_bc10_cw10_seed3",
+    "config": "configs/archived/cable_lambda_bc10/cable_lambda_bc10_cw10_seed3.json",
+    "evaluations": "results/evaluations/cable_lambda_bc10/cable_lambda_bc10_cw10_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "cable_lambda_bc10_cw10_v3_v1_500k_seed3"
   },
   {
     "group": "cable_lambda_bc10",
-    "name": "cable_lambda_bc10_cw10_v3_v1_500k_seed4",
-    "config": "configs/archived/cable_lambda_bc10/cable_lambda_bc10_cw10_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/cable_lambda_bc10/cable_lambda_bc10_cw10_v3_v1_500k_seed4/evaluations.csv",
+    "name": "cable_lambda_bc10_cw10_seed4",
+    "config": "configs/archived/cable_lambda_bc10/cable_lambda_bc10_cw10_seed4.json",
+    "evaluations": "results/evaluations/cable_lambda_bc10/cable_lambda_bc10_cw10_seed4/evaluations.csv",
     "original_device": "cpu",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "cable_lambda_bc10_cw10_v3_v1_500k_seed4"
   },
   {
     "group": "cable_lambda_bc10",
-    "name": "cable_lambda_bc10_cw10_v3_v1_500k_seed5",
-    "config": "configs/archived/cable_lambda_bc10/cable_lambda_bc10_cw10_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/cable_lambda_bc10/cable_lambda_bc10_cw10_v3_v1_500k_seed5/evaluations.csv",
+    "name": "cable_lambda_bc10_cw10_seed5",
+    "config": "configs/archived/cable_lambda_bc10/cable_lambda_bc10_cw10_seed5.json",
+    "evaluations": "results/evaluations/cable_lambda_bc10/cable_lambda_bc10_cw10_seed5/evaluations.csv",
     "original_device": "cpu",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "cable_lambda_bc10_cw10_v3_v1_500k_seed5"
   },
   {
     "group": "cable_lambda_bc1000",
-    "name": "cable_lambda_bc1000_cw10_v3_v1_500k_seed1",
-    "config": "configs/archived/cable_lambda_bc1000/cable_lambda_bc1000_cw10_v3_v1_500k_seed1.json",
-    "evaluations": "results/evaluations/cable_lambda_bc1000/cable_lambda_bc1000_cw10_v3_v1_500k_seed1/evaluations.csv",
+    "name": "cable_lambda_bc1000_cw10_seed1",
+    "config": "configs/archived/cable_lambda_bc1000/cable_lambda_bc1000_cw10_seed1.json",
+    "evaluations": "results/evaluations/cable_lambda_bc1000/cable_lambda_bc1000_cw10_seed1/evaluations.csv",
     "original_device": "cpu",
-    "seed": 1
+    "seed": 1,
+    "original_run_name": "cable_lambda_bc1000_cw10_v3_v1_500k_seed1"
   },
   {
     "group": "cable_lambda_bc1000",
-    "name": "cable_lambda_bc1000_cw10_v3_v1_500k_seed2",
-    "config": "configs/archived/cable_lambda_bc1000/cable_lambda_bc1000_cw10_v3_v1_500k_seed2.json",
-    "evaluations": "results/evaluations/cable_lambda_bc1000/cable_lambda_bc1000_cw10_v3_v1_500k_seed2/evaluations.csv",
+    "name": "cable_lambda_bc1000_cw10_seed2",
+    "config": "configs/archived/cable_lambda_bc1000/cable_lambda_bc1000_cw10_seed2.json",
+    "evaluations": "results/evaluations/cable_lambda_bc1000/cable_lambda_bc1000_cw10_seed2/evaluations.csv",
     "original_device": "cpu",
-    "seed": 2
+    "seed": 2,
+    "original_run_name": "cable_lambda_bc1000_cw10_v3_v1_500k_seed2"
   },
   {
     "group": "cable_lambda_bc1000",
-    "name": "cable_lambda_bc1000_cw10_v3_v1_500k_seed3",
-    "config": "configs/archived/cable_lambda_bc1000/cable_lambda_bc1000_cw10_v3_v1_500k_seed3.json",
-    "evaluations": "results/evaluations/cable_lambda_bc1000/cable_lambda_bc1000_cw10_v3_v1_500k_seed3/evaluations.csv",
+    "name": "cable_lambda_bc1000_cw10_seed3",
+    "config": "configs/archived/cable_lambda_bc1000/cable_lambda_bc1000_cw10_seed3.json",
+    "evaluations": "results/evaluations/cable_lambda_bc1000/cable_lambda_bc1000_cw10_seed3/evaluations.csv",
     "original_device": "cpu",
-    "seed": 3
+    "seed": 3,
+    "original_run_name": "cable_lambda_bc1000_cw10_v3_v1_500k_seed3"
   },
   {
     "group": "cable_lambda_bc1000",
-    "name": "cable_lambda_bc1000_cw10_v3_v1_500k_seed4",
-    "config": "configs/archived/cable_lambda_bc1000/cable_lambda_bc1000_cw10_v3_v1_500k_seed4.json",
-    "evaluations": "results/evaluations/cable_lambda_bc1000/cable_lambda_bc1000_cw10_v3_v1_500k_seed4/evaluations.csv",
+    "name": "cable_lambda_bc1000_cw10_seed4",
+    "config": "configs/archived/cable_lambda_bc1000/cable_lambda_bc1000_cw10_seed4.json",
+    "evaluations": "results/evaluations/cable_lambda_bc1000/cable_lambda_bc1000_cw10_seed4/evaluations.csv",
     "original_device": "cpu",
-    "seed": 4
+    "seed": 4,
+    "original_run_name": "cable_lambda_bc1000_cw10_v3_v1_500k_seed4"
   },
   {
     "group": "cable_lambda_bc1000",
-    "name": "cable_lambda_bc1000_cw10_v3_v1_500k_seed5",
-    "config": "configs/archived/cable_lambda_bc1000/cable_lambda_bc1000_cw10_v3_v1_500k_seed5.json",
-    "evaluations": "results/evaluations/cable_lambda_bc1000/cable_lambda_bc1000_cw10_v3_v1_500k_seed5/evaluations.csv",
+    "name": "cable_lambda_bc1000_cw10_seed5",
+    "config": "configs/archived/cable_lambda_bc1000/cable_lambda_bc1000_cw10_seed5.json",
+    "evaluations": "results/evaluations/cable_lambda_bc1000/cable_lambda_bc1000_cw10_seed5/evaluations.csv",
     "original_device": "cpu",
-    "seed": 5
+    "seed": 5,
+    "original_run_name": "cable_lambda_bc1000_cw10_v3_v1_500k_seed5"
   }
 ]

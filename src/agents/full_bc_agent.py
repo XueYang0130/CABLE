@@ -10,7 +10,7 @@ from agents.sac_agent import SACAgent
 
 
 class FullBehaviorCloningSACAgent(SACAgent):
-    """CW10 full-trajectory behavioral cloning with ClonEx-style policy distillation."""
+    """SAC with historical behavior-cloning regularization."""
 
     def __init__(
         self,

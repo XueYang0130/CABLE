@@ -1,4 +1,4 @@
-"""Evaluation components for CRL-CW."""
+"""Evaluation components for CABLE."""
 
 from .continual_metrics import (
     ContinualMetricsResult,
