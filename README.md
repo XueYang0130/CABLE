@@ -36,10 +36,10 @@ CW3 and per-run configurations are in [`configs/archived/`](configs/archived/). 
 
 ## Results
 
-Recompute average performance, forgetting, and learning curves from the included evaluation records:
+Recompute average performance, forward transfer, forgetting, and learning curves from the included evaluation records:
 
 ```bash
-python scripts/aggregate_results.py
+python scripts/aggregate_results.py --reference results/reference_seeds1_5.json
 python scripts/plot_results.py
 ```
 

@@ -1,5 +1,5 @@
 {
-  "reference": null,
+  "reference": "results/reference_seeds1_5.json",
   "groups": {
     "fine_tuning_cw10": {
       "average_performance": {
@@ -12,6 +12,12 @@
         "mean": 0.56,
         "low": 0.532,
         "high": 0.5864,
+        "n_seeds": 5
+      },
+      "forward_transfer": {
+        "mean": -0.3870630735636973,
+        "low": -0.5777372639876315,
+        "high": -0.18165396563760164,
         "n_seeds": 5
       }
     },
@@ -27,6 +33,12 @@
         "low": 0.03440000000000001,
         "high": 0.06799999999999998,
         "n_seeds": 5
+      },
+      "forward_transfer": {
+        "mean": 0.3251763822475018,
+        "low": 0.16265725678039664,
+        "high": 0.469817609097465,
+        "n_seeds": 5
       }
     },
     "recall_cw10": {
@@ -40,6 +52,12 @@
         "mean": 0.009599999999999994,
         "low": -0.029599999999999994,
         "high": 0.04719999999999999,
+        "n_seeds": 5
+      },
+      "forward_transfer": {
+        "mean": -1.7928196599779884,
+        "low": -2.1120986657315286,
+        "high": -1.4424696933136432,
         "n_seeds": 5
       }
     },
@@ -55,6 +73,12 @@
         "low": -0.04319999999999998,
         "high": -0.004799999999999997,
         "n_seeds": 5
+      },
+      "forward_transfer": {
+        "mean": -0.5141838259279171,
+        "low": -0.877759719502591,
+        "high": -0.2224855646251059,
+        "n_seeds": 5
       }
     },
     "cable_cw10": {
@@ -68,6 +92,12 @@
         "mean": -0.0232,
         "low": -0.0448,
         "high": 0.0016000000000000124,
+        "n_seeds": 5
+      },
+      "forward_transfer": {
+        "mean": 0.4752360981633129,
+        "low": 0.35731953837121677,
+        "high": 0.5729415950596939,
         "n_seeds": 5
       }
     },
@@ -83,6 +113,12 @@
         "low": 0.4033333333333333,
         "high": 0.51,
         "n_seeds": 5
+      },
+      "forward_transfer": {
+        "mean": -0.4441854644721861,
+        "low": -0.7329682712197632,
+        "high": -0.1561999725828082,
+        "n_seeds": 5
       }
     },
     "clonex_sac_cw3": {
@@ -96,6 +132,12 @@
         "mean": 0.010666666666666658,
         "low": 0.003666666666666666,
         "high": 0.017666666666666647,
+        "n_seeds": 5
+      },
+      "forward_transfer": {
+        "mean": 0.14479590758690503,
+        "low": 0.11514988514712059,
+        "high": 0.17798534018380882,
         "n_seeds": 5
       }
     },
@@ -111,6 +153,12 @@
         "low": -0.015666666666666676,
         "high": 0.007000000000000006,
         "n_seeds": 5
+      },
+      "forward_transfer": {
+        "mean": 0.34834448119983225,
+        "low": 0.28112877656651813,
+        "high": 0.41218793802674636,
+        "n_seeds": 5
       }
     },
     "no_projection_cw10": {
@@ -124,6 +172,12 @@
         "mean": -0.04399999999999999,
         "low": -0.0928,
         "high": -0.0071999999999999885,
+        "n_seeds": 5
+      },
+      "forward_transfer": {
+        "mean": 0.27896113424566626,
+        "low": 0.10741518626025692,
+        "high": 0.4276865165663818,
         "n_seeds": 5
       }
     },
@@ -139,6 +193,12 @@
         "low": -0.036799999999999986,
         "high": 0.0096,
         "n_seeds": 5
+      },
+      "forward_transfer": {
+        "mean": 0.2875270000623191,
+        "low": 0.11585298892336712,
+        "high": 0.41756262997907856,
+        "n_seeds": 5
       }
     },
     "all_states_cw10": {
@@ -152,6 +212,12 @@
         "mean": 0.0007999999999999993,
         "low": -0.014399999999999996,
         "high": 0.015199999999999991,
+        "n_seeds": 5
+      },
+      "forward_transfer": {
+        "mean": 0.2909264469216195,
+        "low": 0.20537791254654175,
+        "high": 0.3764749812966973,
         "n_seeds": 5
       }
     },
@@ -167,6 +233,12 @@
         "low": -0.013599999999999996,
         "high": 0.029600000000000005,
         "n_seeds": 5
+      },
+      "forward_transfer": {
+        "mean": 0.47855260182378306,
+        "low": 0.33220877881844074,
+        "high": 0.5851500960100676,
+        "n_seeds": 5
       }
     },
     "cable_lambda_bc10": {
@@ -180,6 +252,12 @@
         "mean": 0.07359999999999998,
         "low": 0.044000000000000004,
         "high": 0.1056,
+        "n_seeds": 5
+      },
+      "forward_transfer": {
+        "mean": 0.4217666007219436,
+        "low": 0.322328602611586,
+        "high": 0.5336610715002953,
         "n_seeds": 5
       }
     },
@@ -195,6 +273,12 @@
         "low": -0.04639999999999998,
         "high": 0.010399999999999982,
         "n_seeds": 5
+      },
+      "forward_transfer": {
+        "mean": 0.5315644035355285,
+        "low": 0.475369952834642,
+        "high": 0.619459385371744,
+        "n_seeds": 5
       }
     }
   },
@@ -202,877 +286,1052 @@
     {
       "name": "fine_tuning_cw10_seed1",
       "average_performance": 0.13999999999999999,
-      "average_forgetting": 0.492
+      "average_forgetting": 0.492,
+      "forward_transfer": 0.08797764410337026
     },
     {
       "name": "fine_tuning_cw10_seed2",
       "average_performance": 0.1,
-      "average_forgetting": 0.612
+      "average_forgetting": 0.612,
+      "forward_transfer": -0.6376738258163985
     },
     {
       "name": "fine_tuning_cw10_seed3",
       "average_performance": 0.004,
-      "average_forgetting": 0.576
+      "average_forgetting": 0.576,
+      "forward_transfer": -0.5345289346817204
     },
     {
       "name": "fine_tuning_cw10_seed4",
       "average_performance": 0.1,
-      "average_forgetting": 0.5640000000000001
+      "average_forgetting": 0.5640000000000001,
+      "forward_transfer": -0.5909773123791593
     },
     {
       "name": "fine_tuning_cw10_seed5",
       "average_performance": 0.004,
-      "average_forgetting": 0.5559999999999999
+      "average_forgetting": 0.5559999999999999,
+      "forward_transfer": -0.2601129390445788
     },
     {
       "name": "clonex_sac_cw10_seed1",
       "average_performance": 0.884,
-      "average_forgetting": 0.06799999999999998
+      "average_forgetting": 0.06799999999999998,
+      "forward_transfer": 0.5825154672497433
     },
     {
       "name": "clonex_sac_cw10_seed2",
       "average_performance": 0.8239999999999998,
-      "average_forgetting": 0.04400000000000002
+      "average_forgetting": 0.04400000000000002,
+      "forward_transfer": 0.26792078119729806
     },
     {
       "name": "clonex_sac_cw10_seed3",
       "average_performance": 0.8039999999999999,
-      "average_forgetting": 0.06000000000000003
+      "average_forgetting": 0.06000000000000003,
+      "forward_transfer": 0.45427869905308577
     },
     {
       "name": "clonex_sac_cw10_seed4",
       "average_performance": 0.9039999999999999,
-      "average_forgetting": 0.012000000000000021
+      "average_forgetting": 0.012000000000000021,
+      "forward_transfer": 0.3648892059673764
     },
     {
       "name": "clonex_sac_cw10_seed5",
       "average_performance": 0.624,
-      "average_forgetting": 0.07599999999999997
+      "average_forgetting": 0.07599999999999997,
+      "forward_transfer": -0.043722242229994684
     },
     {
       "name": "recall_cw10_seed1",
       "average_performance": 0.612,
-      "average_forgetting": 0.044000000000000004
+      "average_forgetting": 0.044000000000000004,
+      "forward_transfer": -0.9568298254512042
     },
     {
       "name": "recall_cw10_seed2",
       "average_performance": 0.404,
-      "average_forgetting": 0.07999999999999999
+      "average_forgetting": 0.07999999999999999,
+      "forward_transfer": -2.341787207194834
     },
     {
       "name": "recall_cw10_seed3",
       "average_performance": 0.528,
-      "average_forgetting": -2.5673907444456746e-17
+      "average_forgetting": -2.5673907444456746e-17,
+      "forward_transfer": -1.9384235656241025
     },
     {
       "name": "recall_cw10_seed4",
       "average_performance": 0.5800000000000001,
-      "average_forgetting": -0.012000000000000016
+      "average_forgetting": -0.012000000000000016,
+      "forward_transfer": -2.000071783019769
     },
     {
       "name": "recall_cw10_seed5",
       "average_performance": 0.6759999999999999,
-      "average_forgetting": -0.06399999999999999
+      "average_forgetting": -0.06399999999999999,
+      "forward_transfer": -1.7269859186000331
     },
     {
       "name": "packnet_cw10_seed1",
       "average_performance": 0.76,
-      "average_forgetting": -0.031999999999999994
+      "average_forgetting": -0.031999999999999994,
+      "forward_transfer": -0.0713458671636508
     },
     {
       "name": "packnet_cw10_seed2",
       "average_performance": 0.756,
-      "average_forgetting": 0.020000000000000007
+      "average_forgetting": 0.020000000000000007,
+      "forward_transfer": -0.2430481960873841
     },
     {
       "name": "packnet_cw10_seed3",
       "average_performance": 0.86,
-      "average_forgetting": -0.03999999999999998
+      "average_forgetting": -0.03999999999999998,
+      "forward_transfer": -0.535776750522855
     },
     {
       "name": "packnet_cw10_seed4",
       "average_performance": 0.724,
-      "average_forgetting": -0.05599999999999998
+      "average_forgetting": -0.05599999999999998,
+      "forward_transfer": -1.3581348447539734
     },
     {
       "name": "packnet_cw10_seed5",
       "average_performance": 0.748,
-      "average_forgetting": -0.016000000000000004
+      "average_forgetting": -0.016000000000000004,
+      "forward_transfer": -0.36261347111172204
     },
     {
       "name": "cable_cw10_seed1",
       "average_performance": 0.9640000000000001,
-      "average_forgetting": -0.008000000000000007
+      "average_forgetting": -0.008000000000000007,
+      "forward_transfer": 0.6545855252936603
     },
     {
       "name": "cable_cw10_seed2",
       "average_performance": 0.8480000000000001,
-      "average_forgetting": -0.04799999999999999
+      "average_forgetting": -0.04799999999999999,
+      "forward_transfer": 0.5175411512821296
     },
     {
       "name": "cable_cw10_seed3",
       "average_performance": 0.876,
-      "average_forgetting": -0.06000000000000001
+      "average_forgetting": -0.06000000000000001,
+      "forward_transfer": 0.20482367176009791
     },
     {
       "name": "cable_cw10_seed4",
       "average_performance": 0.732,
-      "average_forgetting": 0.028000000000000018
+      "average_forgetting": 0.028000000000000018,
+      "forward_transfer": 0.446699529979474
     },
     {
       "name": "cable_cw10_seed5",
       "average_performance": 0.992,
-      "average_forgetting": -0.028000000000000004
+      "average_forgetting": -0.028000000000000004,
+      "forward_transfer": 0.5525306125012024
     },
     {
       "name": "fine_tuning_cw3_0_seed1",
       "average_performance": 0.02666666666666667,
-      "average_forgetting": 0.68
+      "average_forgetting": 0.68,
+      "forward_transfer": -0.21192975689378582
     },
     {
       "name": "fine_tuning_cw3_1_seed1",
       "average_performance": 0.0,
-      "average_forgetting": 0.02666666666666667
+      "average_forgetting": 0.02666666666666667,
+      "forward_transfer": -8.567046988099625
     },
     {
       "name": "fine_tuning_cw3_2_seed1",
       "average_performance": 0.0,
-      "average_forgetting": 0.3333333333333333
+      "average_forgetting": 0.3333333333333333,
+      "forward_transfer": -0.43865258085441566
     },
     {
       "name": "fine_tuning_cw3_3_seed1",
       "average_performance": 0.30666666666666664,
-      "average_forgetting": 0.3866666666666667
+      "average_forgetting": 0.3866666666666667,
+      "forward_transfer": 0.19315710767937225
     },
     {
       "name": "fine_tuning_cw3_4_seed1",
       "average_performance": 0.3333333333333333,
-      "average_forgetting": 0.5733333333333334
+      "average_forgetting": 0.5733333333333334,
+      "forward_transfer": -0.09293562663267434
     },
     {
       "name": "fine_tuning_cw3_5_seed1",
       "average_performance": 0.0,
-      "average_forgetting": 0.3333333333333333
+      "average_forgetting": 0.3333333333333333,
+      "forward_transfer": 0.1571969696969696
     },
     {
       "name": "fine_tuning_cw3_6_seed1",
       "average_performance": 0.39999999999999997,
-      "average_forgetting": 0.6
+      "average_forgetting": 0.6,
+      "forward_transfer": 0.3940766359244616
     },
     {
       "name": "fine_tuning_cw3_7_seed1",
       "average_performance": 0.3333333333333333,
-      "average_forgetting": 0.5733333333333334
+      "average_forgetting": 0.5733333333333334,
+      "forward_transfer": -0.05695077814782573
     },
     {
       "name": "fine_tuning_cw3_0_seed2",
       "average_performance": 0.06666666666666667,
-      "average_forgetting": 0.7866666666666667
+      "average_forgetting": 0.7866666666666667,
+      "forward_transfer": -1.8297278261307055
     },
     {
       "name": "fine_tuning_cw3_1_seed2",
       "average_performance": 0.3333333333333333,
-      "average_forgetting": 0.64
+      "average_forgetting": 0.64,
+      "forward_transfer": -0.12515846726373073
     },
     {
       "name": "fine_tuning_cw3_2_seed2",
       "average_performance": 0.0,
-      "average_forgetting": 0.3466666666666667
+      "average_forgetting": 0.3466666666666667,
+      "forward_transfer": -0.23742470577332966
     },
     {
       "name": "fine_tuning_cw3_3_seed2",
       "average_performance": 0.28,
-      "average_forgetting": 0.7066666666666667
+      "average_forgetting": 0.7066666666666667,
+      "forward_transfer": 0.17869639994276376
     },
     {
       "name": "fine_tuning_cw3_4_seed2",
       "average_performance": 0.3333333333333333,
-      "average_forgetting": 0.6266666666666666
+      "average_forgetting": 0.6266666666666666,
+      "forward_transfer": 0.3859220226357582
     },
     {
       "name": "fine_tuning_cw3_5_seed2",
       "average_performance": 0.3466666666666667,
-      "average_forgetting": 0.17333333333333326
+      "average_forgetting": 0.17333333333333326,
+      "forward_transfer": 0.23522727272727262
     },
     {
       "name": "fine_tuning_cw3_6_seed2",
       "average_performance": 0.4666666666666666,
-      "average_forgetting": 0.48000000000000004
+      "average_forgetting": 0.48000000000000004,
+      "forward_transfer": 0.1894488361879659
     },
     {
       "name": "fine_tuning_cw3_7_seed2",
       "average_performance": 0.3333333333333333,
-      "average_forgetting": 0.6266666666666666
+      "average_forgetting": 0.6266666666666666,
+      "forward_transfer": 0.2337755579892933
     },
     {
       "name": "fine_tuning_cw3_0_seed3",
       "average_performance": 0.32,
-      "average_forgetting": 0.5733333333333334
+      "average_forgetting": 0.5733333333333334,
+      "forward_transfer": -1.520340371059797
     },
     {
       "name": "fine_tuning_cw3_1_seed3",
       "average_performance": 0.3333333333333333,
-      "average_forgetting": 0.6
+      "average_forgetting": 0.6,
+      "forward_transfer": -0.12077250235144987
     },
     {
       "name": "fine_tuning_cw3_2_seed3",
       "average_performance": 0.0,
-      "average_forgetting": 0.3466666666666667
+      "average_forgetting": 0.3466666666666667,
+      "forward_transfer": -0.054814197016031886
     },
     {
       "name": "fine_tuning_cw3_3_seed3",
       "average_performance": 0.3333333333333333,
-      "average_forgetting": 0.21333333333333335
+      "average_forgetting": 0.21333333333333335,
+      "forward_transfer": -0.008166114733579484
     },
     {
       "name": "fine_tuning_cw3_4_seed3",
       "average_performance": 0.32,
-      "average_forgetting": 0.48000000000000004
+      "average_forgetting": 0.48000000000000004,
+      "forward_transfer": -0.11429267494736038
     },
     {
       "name": "fine_tuning_cw3_5_seed3",
       "average_performance": 0.4533333333333333,
-      "average_forgetting": 0.0666666666666667
+      "average_forgetting": 0.0666666666666667,
+      "forward_transfer": 0.22689393939393956
     },
     {
       "name": "fine_tuning_cw3_6_seed3",
       "average_performance": 0.52,
-      "average_forgetting": 0.48
+      "average_forgetting": 0.48,
+      "forward_transfer": 0.5202020202020194
     },
     {
       "name": "fine_tuning_cw3_7_seed3",
       "average_performance": 0.3333333333333333,
-      "average_forgetting": 0.52
+      "average_forgetting": 0.52,
+      "forward_transfer": 0.17484873919405355
     },
     {
       "name": "fine_tuning_cw3_0_seed4",
       "average_performance": 0.3333333333333333,
-      "average_forgetting": 0.6666666666666666
+      "average_forgetting": 0.6666666666666666,
+      "forward_transfer": -0.5338861777710705
     },
     {
       "name": "fine_tuning_cw3_1_seed4",
       "average_performance": 0.3333333333333333,
-      "average_forgetting": 0.5866666666666667
+      "average_forgetting": 0.5866666666666667,
+      "forward_transfer": -0.797386823702614
     },
     {
       "name": "fine_tuning_cw3_2_seed4",
       "average_performance": 0.06666666666666667,
-      "average_forgetting": 0.27999999999999997
+      "average_forgetting": 0.27999999999999997,
+      "forward_transfer": -0.3499212306551755
     },
     {
       "name": "fine_tuning_cw3_3_seed4",
       "average_performance": 0.3466666666666667,
-      "average_forgetting": 0.5866666666666667
+      "average_forgetting": 0.5866666666666667,
+      "forward_transfer": -0.055156536360385124
     },
     {
       "name": "fine_tuning_cw3_4_seed4",
       "average_performance": 0.3333333333333333,
-      "average_forgetting": 0.6
+      "average_forgetting": 0.6,
+      "forward_transfer": 0.1409074451436451
     },
     {
       "name": "fine_tuning_cw3_5_seed4",
       "average_performance": 0.0,
-      "average_forgetting": 0.3333333333333333
+      "average_forgetting": 0.3333333333333333,
+      "forward_transfer": 0.1477272727272728
     },
     {
       "name": "fine_tuning_cw3_6_seed4",
       "average_performance": 0.5066666666666667,
-      "average_forgetting": 0.49333333333333335
+      "average_forgetting": 0.49333333333333335,
+      "forward_transfer": 0.476010101010101
     },
     {
       "name": "fine_tuning_cw3_7_seed4",
       "average_performance": 0.0,
-      "average_forgetting": 0.6266666666666667
+      "average_forgetting": 0.6266666666666667,
+      "forward_transfer": -0.7530319487957492
     },
     {
       "name": "fine_tuning_cw3_0_seed5",
       "average_performance": 0.3333333333333333,
-      "average_forgetting": 0.6133333333333334
+      "average_forgetting": 0.6133333333333334,
+      "forward_transfer": -2.4640790863812465
     },
     {
       "name": "fine_tuning_cw3_1_seed5",
       "average_performance": 0.3333333333333333,
-      "average_forgetting": 0.5466666666666666
+      "average_forgetting": 0.5466666666666666,
+      "forward_transfer": -1.6145053776632745
     },
     {
       "name": "fine_tuning_cw3_2_seed5",
       "average_performance": 0.0,
-      "average_forgetting": 0.3333333333333333
+      "average_forgetting": 0.3333333333333333,
+      "forward_transfer": 0.08277731442869037
     },
     {
       "name": "fine_tuning_cw3_3_seed5",
       "average_performance": 0.3333333333333333,
-      "average_forgetting": 0.3066666666666667
+      "average_forgetting": 0.3066666666666667,
+      "forward_transfer": -0.053199386327603015
     },
     {
       "name": "fine_tuning_cw3_4_seed5",
       "average_performance": 0.3333333333333333,
-      "average_forgetting": 0.32
+      "average_forgetting": 0.32,
+      "forward_transfer": -0.37173053732745626
     },
     {
       "name": "fine_tuning_cw3_5_seed5",
       "average_performance": 0.09333333333333332,
-      "average_forgetting": -0.09333333333333332
+      "average_forgetting": -0.09333333333333332,
+      "forward_transfer": -0.9034090909090909
     },
     {
       "name": "fine_tuning_cw3_6_seed5",
       "average_performance": 0.3333333333333333,
-      "average_forgetting": 0.5866666666666667
+      "average_forgetting": 0.5866666666666667,
+      "forward_transfer": -0.18947628458498153
     },
     {
       "name": "fine_tuning_cw3_7_seed5",
       "average_performance": 0.38666666666666666,
-      "average_forgetting": 0.27999999999999997
+      "average_forgetting": 0.27999999999999997,
+      "forward_transfer": -0.0402911433880625
     },
     {
       "name": "clonex_sac_cw3_0_seed1",
       "average_performance": 0.6933333333333334,
-      "average_forgetting": 0.15999999999999995
+      "average_forgetting": 0.15999999999999995,
+      "forward_transfer": -0.5206114828416991
     },
     {
       "name": "clonex_sac_cw3_1_seed1",
       "average_performance": 1.0,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": -0.28371774424406104
     },
     {
       "name": "clonex_sac_cw3_2_seed1",
       "average_performance": 0.6666666666666666,
-      "average_forgetting": 0.06666666666666664
+      "average_forgetting": 0.06666666666666664,
+      "forward_transfer": 0.2261560559725697
     },
     {
       "name": "clonex_sac_cw3_3_seed1",
       "average_performance": 0.6533333333333333,
-      "average_forgetting": 0.03999999999999998
+      "average_forgetting": 0.03999999999999998,
+      "forward_transfer": 0.19825003568570362
     },
     {
       "name": "clonex_sac_cw3_4_seed1",
       "average_performance": 0.9866666666666667,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.4131392427284597
     },
     {
       "name": "clonex_sac_cw3_5_seed1",
       "average_performance": 0.8133333333333335,
-      "average_forgetting": -0.08000000000000007
+      "average_forgetting": -0.08000000000000007,
+      "forward_transfer": 0.568939393939394
     },
     {
       "name": "clonex_sac_cw3_6_seed1",
       "average_performance": 1.0,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.6780303030303033
     },
     {
       "name": "clonex_sac_cw3_7_seed1",
       "average_performance": 0.96,
-      "average_forgetting": 0.026666666666666616
+      "average_forgetting": 0.026666666666666616,
+      "forward_transfer": 0.4484927780819949
     },
     {
       "name": "clonex_sac_cw3_0_seed2",
       "average_performance": 0.9866666666666667,
-      "average_forgetting": -0.040000000000000036
+      "average_forgetting": -0.040000000000000036,
+      "forward_transfer": -0.7156568451532492
     },
     {
       "name": "clonex_sac_cw3_1_seed2",
       "average_performance": 1.0,
-      "average_forgetting": -0.05333333333333331
+      "average_forgetting": -0.05333333333333331,
+      "forward_transfer": -0.89879564879565
     },
     {
       "name": "clonex_sac_cw3_2_seed2",
       "average_performance": 0.6533333333333333,
-      "average_forgetting": -0.013333333333333345
+      "average_forgetting": -0.013333333333333345,
+      "forward_transfer": 0.20760355852098974
     },
     {
       "name": "clonex_sac_cw3_3_seed2",
       "average_performance": 0.9333333333333332,
-      "average_forgetting": 0.03999999999999996
+      "average_forgetting": 0.03999999999999996,
+      "forward_transfer": 0.4123303972822881
     },
     {
       "name": "clonex_sac_cw3_4_seed2",
       "average_performance": 0.9733333333333333,
-      "average_forgetting": 0.02666666666666669
+      "average_forgetting": 0.02666666666666669,
+      "forward_transfer": 0.42537850111662684
     },
     {
       "name": "clonex_sac_cw3_5_seed2",
       "average_performance": 0.3333333333333333,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.1287878787878788
     },
     {
       "name": "clonex_sac_cw3_6_seed2",
       "average_performance": 1.0,
-      "average_forgetting": -0.013333333333333345
+      "average_forgetting": -0.013333333333333345,
+      "forward_transfer": 0.6748737373737369
     },
     {
       "name": "clonex_sac_cw3_7_seed2",
       "average_performance": 0.9866666666666667,
-      "average_forgetting": 0.013333333333333345
+      "average_forgetting": 0.013333333333333345,
+      "forward_transfer": 0.5800502182883439
     },
     {
       "name": "clonex_sac_cw3_0_seed3",
       "average_performance": 0.9066666666666667,
-      "average_forgetting": -0.013333333333333345
+      "average_forgetting": -0.013333333333333345,
+      "forward_transfer": -0.5410496777403259
     },
     {
       "name": "clonex_sac_cw3_1_seed3",
       "average_performance": 0.9199999999999999,
-      "average_forgetting": 0.013333333333333345
+      "average_forgetting": 0.013333333333333345,
+      "forward_transfer": -0.12633419212366617
     },
     {
       "name": "clonex_sac_cw3_2_seed3",
       "average_performance": 0.7733333333333333,
-      "average_forgetting": 0.10666666666666669
+      "average_forgetting": 0.10666666666666669,
+      "forward_transfer": 0.2752803261977574
     },
     {
       "name": "clonex_sac_cw3_3_seed3",
       "average_performance": 0.6666666666666666,
-      "average_forgetting": -0.02666666666666669
+      "average_forgetting": -0.02666666666666669,
+      "forward_transfer": 0.2820525860355801
     },
     {
       "name": "clonex_sac_cw3_4_seed3",
       "average_performance": 0.6666666666666666,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.19299567213559513
     },
     {
       "name": "clonex_sac_cw3_5_seed3",
       "average_performance": 0.84,
-      "average_forgetting": -0.03999999999999996
+      "average_forgetting": -0.03999999999999996,
+      "forward_transfer": 0.16174242424242422
     },
     {
       "name": "clonex_sac_cw3_6_seed3",
       "average_performance": 0.9733333333333333,
-      "average_forgetting": 0.02666666666666669
+      "average_forgetting": 0.02666666666666669,
+      "forward_transfer": 0.7285353535353533
     },
     {
       "name": "clonex_sac_cw3_7_seed3",
       "average_performance": 0.6666666666666666,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.3419855711254942
     },
     {
       "name": "clonex_sac_cw3_0_seed4",
       "average_performance": 0.9333333333333332,
-      "average_forgetting": -0.02666666666666669
+      "average_forgetting": -0.02666666666666669,
+      "forward_transfer": -0.5831069410206107
     },
     {
       "name": "clonex_sac_cw3_1_seed4",
       "average_performance": 1.0,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": -0.7015908068539662
     },
     {
       "name": "clonex_sac_cw3_2_seed4",
       "average_performance": 0.6666666666666666,
-      "average_forgetting": 0.0133333333333333
+      "average_forgetting": 0.0133333333333333,
+      "forward_transfer": 0.3673755907700862
     },
     {
       "name": "clonex_sac_cw3_3_seed4",
       "average_performance": 0.56,
-      "average_forgetting": 0.09333333333333327
+      "average_forgetting": 0.09333333333333327,
+      "forward_transfer": 0.1502252067814833
     },
     {
       "name": "clonex_sac_cw3_4_seed4",
       "average_performance": 1.0,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.4583157535660744
     },
     {
       "name": "clonex_sac_cw3_5_seed4",
       "average_performance": 0.5333333333333333,
-      "average_forgetting": 0.013333333333333336
+      "average_forgetting": 0.013333333333333336,
+      "forward_transfer": 0.21969696969696972
     },
     {
       "name": "clonex_sac_cw3_6_seed4",
       "average_performance": 1.0,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.6212121212121213
     },
     {
       "name": "clonex_sac_cw3_7_seed4",
       "average_performance": 1.0,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.5113460565963774
     },
     {
       "name": "clonex_sac_cw3_0_seed5",
       "average_performance": 0.9733333333333333,
-      "average_forgetting": -0.013333333333333345
+      "average_forgetting": -0.013333333333333345,
+      "forward_transfer": 0.1428228046933077
     },
     {
       "name": "clonex_sac_cw3_1_seed5",
       "average_performance": 0.9866666666666667,
-      "average_forgetting": 0.013333333333333345
+      "average_forgetting": 0.013333333333333345,
+      "forward_transfer": -1.1147814174129977
     },
     {
       "name": "clonex_sac_cw3_2_seed5",
       "average_performance": 0.5333333333333333,
-      "average_forgetting": 0.08
+      "average_forgetting": 0.08,
+      "forward_transfer": 0.14861921972013725
     },
     {
       "name": "clonex_sac_cw3_3_seed5",
       "average_performance": 0.9066666666666667,
-      "average_forgetting": 0.013333333333333272
+      "average_forgetting": 0.013333333333333272,
+      "forward_transfer": 0.40410169130240753
     },
     {
       "name": "clonex_sac_cw3_4_seed5",
       "average_performance": 0.6666666666666666,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.21984309371985852
     },
     {
       "name": "clonex_sac_cw3_5_seed5",
       "average_performance": 0.3333333333333333,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.19507575757575754
     },
     {
       "name": "clonex_sac_cw3_6_seed5",
       "average_performance": 1.0,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.5676877470355732
     },
     {
       "name": "clonex_sac_cw3_7_seed5",
       "average_performance": 0.6666666666666666,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.3265350129117779
     },
     {
       "name": "cable_cw3_0_seed1",
       "average_performance": 0.7866666666666666,
-      "average_forgetting": 0.026666666666666655
+      "average_forgetting": 0.026666666666666655,
+      "forward_transfer": 0.09761701128607574
     },
     {
       "name": "cable_cw3_1_seed1",
       "average_performance": 1.0,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.15925448820185628
     },
     {
       "name": "cable_cw3_2_seed1",
       "average_performance": 0.7733333333333334,
-      "average_forgetting": 0.02666666666666669
+      "average_forgetting": 0.02666666666666669,
+      "forward_transfer": 0.5812019275322027
     },
     {
       "name": "cable_cw3_3_seed1",
       "average_performance": 1.0,
-      "average_forgetting": -0.02666666666666669
+      "average_forgetting": -0.02666666666666669,
+      "forward_transfer": 0.754105855358932
     },
     {
       "name": "cable_cw3_4_seed1",
       "average_performance": 0.9866666666666667,
-      "average_forgetting": -0.05333333333333331
+      "average_forgetting": -0.05333333333333331,
+      "forward_transfer": 0.4654516429227597
     },
     {
       "name": "cable_cw3_5_seed1",
       "average_performance": 0.8933333333333332,
-      "average_forgetting": -0.06666666666666665
+      "average_forgetting": -0.06666666666666665,
+      "forward_transfer": 0.40037878787878783
     },
     {
       "name": "cable_cw3_6_seed1",
       "average_performance": 1.0,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.6180555555555557
     },
     {
       "name": "cable_cw3_7_seed1",
       "average_performance": 1.0,
-      "average_forgetting": -0.02666666666666669
+      "average_forgetting": -0.02666666666666669,
+      "forward_transfer": 0.7211334611045778
     },
     {
       "name": "cable_cw3_0_seed2",
       "average_performance": 0.8933333333333332,
-      "average_forgetting": -0.05333333333333331
+      "average_forgetting": -0.05333333333333331,
+      "forward_transfer": 0.4244688165551475
     },
     {
       "name": "cable_cw3_1_seed2",
       "average_performance": 0.84,
-      "average_forgetting": 0.013333333333333345
+      "average_forgetting": 0.013333333333333345,
+      "forward_transfer": -0.17350631824316096
     },
     {
       "name": "cable_cw3_2_seed2",
       "average_performance": 0.88,
-      "average_forgetting": 0.04
+      "average_forgetting": 0.04,
+      "forward_transfer": 0.34606616624965253
     },
     {
       "name": "cable_cw3_3_seed2",
       "average_performance": 0.9333333333333332,
-      "average_forgetting": 0.06666666666666672
+      "average_forgetting": 0.06666666666666672,
+      "forward_transfer": 0.5146356154971058
     },
     {
       "name": "cable_cw3_4_seed2",
       "average_performance": 1.0,
-      "average_forgetting": -0.013333333333333345
+      "average_forgetting": -0.013333333333333345,
+      "forward_transfer": 0.38982921941843635
     },
     {
       "name": "cable_cw3_5_seed2",
       "average_performance": 0.7866666666666666,
-      "average_forgetting": 0.0666666666666667
+      "average_forgetting": 0.0666666666666667,
+      "forward_transfer": 0.4503787878787879
     },
     {
       "name": "cable_cw3_6_seed2",
       "average_performance": 1.0,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.5801767676767678
     },
     {
       "name": "cable_cw3_7_seed2",
       "average_performance": 0.9866666666666667,
-      "average_forgetting": 0.013333333333333345
+      "average_forgetting": 0.013333333333333345,
+      "forward_transfer": 0.6051069971962141
     },
     {
       "name": "cable_cw3_0_seed3",
       "average_performance": 0.96,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.519633244453388
     },
     {
       "name": "cable_cw3_1_seed3",
       "average_performance": 0.9066666666666666,
-      "average_forgetting": 0.013333333333333345
+      "average_forgetting": 0.013333333333333345,
+      "forward_transfer": -0.5836809389440978
     },
     {
       "name": "cable_cw3_2_seed3",
       "average_performance": 0.9199999999999999,
-      "average_forgetting": -0.0666666666666667
+      "average_forgetting": -0.0666666666666667,
+      "forward_transfer": 0.27725882680011127
     },
     {
       "name": "cable_cw3_3_seed3",
       "average_performance": 0.9733333333333333,
-      "average_forgetting": -0.013333333333333345
+      "average_forgetting": -0.013333333333333345,
+      "forward_transfer": 0.4926545695174022
     },
     {
       "name": "cable_cw3_4_seed3",
       "average_performance": 0.9866666666666667,
-      "average_forgetting": -0.013333333333333345
+      "average_forgetting": -0.013333333333333345,
+      "forward_transfer": 0.5796291142889346
     },
     {
       "name": "cable_cw3_5_seed3",
       "average_performance": 0.9066666666666667,
-      "average_forgetting": -0.08000000000000003
+      "average_forgetting": -0.08000000000000003,
+      "forward_transfer": 0.2886363636363637
     },
     {
       "name": "cable_cw3_6_seed3",
       "average_performance": 1.0,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.709595959595959
     },
     {
       "name": "cable_cw3_7_seed3",
       "average_performance": 0.9733333333333333,
-      "average_forgetting": -0.013333333333333345
+      "average_forgetting": -0.013333333333333345,
+      "forward_transfer": 0.6616998213596418
     },
     {
       "name": "cable_cw3_0_seed4",
       "average_performance": 0.9733333333333333,
-      "average_forgetting": -0.06666666666666665
+      "average_forgetting": -0.06666666666666665,
+      "forward_transfer": 0.30427546075028045
     },
     {
       "name": "cable_cw3_1_seed4",
       "average_performance": 1.0,
-      "average_forgetting": -0.13333333333333333
+      "average_forgetting": -0.13333333333333333,
+      "forward_transfer": -0.2299104404367569
     },
     {
       "name": "cable_cw3_2_seed4",
       "average_performance": 0.3466666666666667,
-      "average_forgetting": 0.17333333333333334
+      "average_forgetting": 0.17333333333333334,
+      "forward_transfer": 0.01567973311092591
     },
     {
       "name": "cable_cw3_3_seed4",
       "average_performance": 0.9199999999999999,
-      "average_forgetting": 0.05333333333333331
+      "average_forgetting": 0.05333333333333331,
+      "forward_transfer": 0.5170668942206198
     },
     {
       "name": "cable_cw3_4_seed4",
       "average_performance": 0.9866666666666667,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.5734163497321391
     },
     {
       "name": "cable_cw3_5_seed4",
       "average_performance": 0.5866666666666667,
-      "average_forgetting": 0.02666666666666669
+      "average_forgetting": 0.02666666666666669,
+      "forward_transfer": 0.3356060606060607
     },
     {
       "name": "cable_cw3_6_seed4",
       "average_performance": 1.0,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.4728535353535346
     },
     {
       "name": "cable_cw3_7_seed4",
       "average_performance": 0.96,
-      "average_forgetting": 0.013333333333333345
+      "average_forgetting": 0.013333333333333345,
+      "forward_transfer": 0.10624463256042171
     },
     {
       "name": "cable_cw3_0_seed5",
       "average_performance": 0.8666666666666667,
-      "average_forgetting": 0.039999999999999925
+      "average_forgetting": 0.039999999999999925,
+      "forward_transfer": -0.9286305221557027
     },
     {
       "name": "cable_cw3_1_seed5",
       "average_performance": 1.0,
-      "average_forgetting": -0.06666666666666665
+      "average_forgetting": -0.06666666666666665,
+      "forward_transfer": -0.18183862920705063
     },
     {
       "name": "cable_cw3_2_seed5",
       "average_performance": 0.9066666666666666,
-      "average_forgetting": -0.013333333333333345
+      "average_forgetting": -0.013333333333333345,
+      "forward_transfer": 0.4083958854601057
     },
     {
       "name": "cable_cw3_3_seed5",
       "average_performance": 0.9466666666666667,
-      "average_forgetting": -0.026666666666666616
+      "average_forgetting": -0.026666666666666616,
+      "forward_transfer": 0.5941920017775915
     },
     {
       "name": "cable_cw3_4_seed5",
       "average_performance": 0.9733333333333333,
-      "average_forgetting": 0.013333333333333345
+      "average_forgetting": 0.013333333333333345,
+      "forward_transfer": 0.5708232717218594
     },
     {
       "name": "cable_cw3_5_seed5",
       "average_performance": 0.8533333333333332,
-      "average_forgetting": -0.03999999999999996
+      "average_forgetting": -0.03999999999999996,
+      "forward_transfer": 0.39659090909090916
     },
     {
       "name": "cable_cw3_6_seed5",
       "average_performance": 1.0,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.441287878787878
     },
     {
       "name": "cable_cw3_7_seed5",
       "average_performance": 1.0,
-      "average_forgetting": -0.013333333333333345
+      "average_forgetting": -0.013333333333333345,
+      "forward_transfer": 0.6579444838430716
     },
     {
       "name": "no_projection_cw10_seed1",
       "average_performance": 0.82,
-      "average_forgetting": -0.007999999999999974
+      "average_forgetting": -0.007999999999999974,
+      "forward_transfer": 0.28061484966858957
     },
     {
       "name": "no_projection_cw10_seed2",
       "average_performance": 0.8480000000000001,
-      "average_forgetting": -0.152
+      "average_forgetting": -0.152,
+      "forward_transfer": -0.11712160365364481
     },
     {
       "name": "no_projection_cw10_seed3",
       "average_performance": 0.9359999999999999,
-      "average_forgetting": -0.05199999999999999
+      "average_forgetting": -0.05199999999999999,
+      "forward_transfer": 0.5860371836304921
     },
     {
       "name": "no_projection_cw10_seed4",
       "average_performance": 0.8800000000000001,
-      "average_forgetting": 0.008000000000000007
+      "average_forgetting": 0.008000000000000007,
+      "forward_transfer": 0.3428716829511676
     },
     {
       "name": "no_projection_cw10_seed5",
       "average_performance": 0.78,
-      "average_forgetting": -0.015999999999999993
+      "average_forgetting": -0.015999999999999993,
+      "forward_transfer": 0.30240355863172697
     },
     {
       "name": "bc_priority_cw10_seed1",
       "average_performance": 0.8560000000000001,
-      "average_forgetting": 0.016000000000000004
+      "average_forgetting": 0.016000000000000004,
+      "forward_transfer": 0.3302615917056611
     },
     {
       "name": "bc_priority_cw10_seed2",
       "average_performance": 0.9199999999999999,
-      "average_forgetting": -0.04
+      "average_forgetting": -0.04,
+      "forward_transfer": 0.39252628720412325
     },
     {
       "name": "bc_priority_cw10_seed3",
       "average_performance": 0.692,
-      "average_forgetting": -0.05599999999999997
+      "average_forgetting": -0.05599999999999997,
+      "forward_transfer": -0.1002936991681556
     },
     {
       "name": "bc_priority_cw10_seed4",
       "average_performance": 0.9,
-      "average_forgetting": 0.024
+      "average_forgetting": 0.024,
+      "forward_transfer": 0.4876197549171791
     },
     {
       "name": "bc_priority_cw10_seed5",
       "average_performance": 0.868,
-      "average_forgetting": -0.008000000000000007
+      "average_forgetting": -0.008000000000000007,
+      "forward_transfer": 0.3275210656527878
     },
     {
       "name": "all_states_cw10_seed1",
       "average_performance": 0.6759999999999999,
-      "average_forgetting": 0.0
+      "average_forgetting": 0.0,
+      "forward_transfer": 0.11005504001691194
     },
     {
       "name": "all_states_cw10_seed2",
       "average_performance": 0.844,
-      "average_forgetting": -0.024000000000000004
+      "average_forgetting": -0.024000000000000004,
+      "forward_transfer": 0.4571364567623443
     },
     {
       "name": "all_states_cw10_seed3",
       "average_performance": 0.812,
-      "average_forgetting": 0.01599999999999998
+      "average_forgetting": 0.01599999999999998,
+      "forward_transfer": 0.35948472592181563
     },
     {
       "name": "all_states_cw10_seed4",
       "average_performance": 0.828,
-      "average_forgetting": 0.028000000000000014
+      "average_forgetting": 0.028000000000000014,
+      "forward_transfer": 0.27882347079185926
     },
     {
       "name": "all_states_cw10_seed5",
       "average_performance": 0.844,
-      "average_forgetting": -0.015999999999999993
+      "average_forgetting": -0.015999999999999993,
+      "forward_transfer": 0.24913254111516636
     },
     {
       "name": "final_teacher_cw10_seed1",
       "average_performance": 0.8400000000000001,
-      "average_forgetting": -0.0040000000000000036
+      "average_forgetting": -0.0040000000000000036,
+      "forward_transfer": 0.5605039867891994
     },
     {
       "name": "final_teacher_cw10_seed2",
       "average_performance": 0.8,
-      "average_forgetting": 0.06
+      "average_forgetting": 0.06,
+      "forward_transfer": 0.15450116084476545
     },
     {
       "name": "final_teacher_cw10_seed3",
       "average_performance": 0.868,
-      "average_forgetting": -0.02
+      "average_forgetting": -0.02,
+      "forward_transfer": 0.49513461485438104
     },
     {
       "name": "final_teacher_cw10_seed4",
       "average_performance": 0.9359999999999999,
-      "average_forgetting": 0.0040000000000000036
+      "average_forgetting": 0.0040000000000000036,
+      "forward_transfer": 0.5455868218618615
     },
     {
       "name": "final_teacher_cw10_seed5",
       "average_performance": 0.792,
-      "average_forgetting": -0.015999999999999993
+      "average_forgetting": -0.015999999999999993,
+      "forward_transfer": 0.6370364247687078
     },
     {
       "name": "cable_lambda_bc10_cw10_seed1",
       "average_performance": 0.8280000000000001,
-      "average_forgetting": 0.084
+      "average_forgetting": 0.084,
+      "forward_transfer": 0.46583868771381215
     },
     {
       "name": "cable_lambda_bc10_cw10_seed2",
       "average_performance": 0.728,
-      "average_forgetting": 0.07199999999999998
+      "average_forgetting": 0.07199999999999998,
+      "forward_transfer": 0.30060515710542035
     },
     {
       "name": "cable_lambda_bc10_cw10_seed3",
       "average_performance": 0.716,
-      "average_forgetting": 0.04400000000000002
+      "average_forgetting": 0.04400000000000002,
+      "forward_transfer": 0.2439888540278571
     },
     {
       "name": "cable_lambda_bc10_cw10_seed4",
       "average_performance": 0.828,
-      "average_forgetting": 0.14400000000000002
+      "average_forgetting": 0.14400000000000002,
+      "forward_transfer": 0.6528259385866024
     },
     {
       "name": "cable_lambda_bc10_cw10_seed5",
       "average_performance": 0.7,
-      "average_forgetting": 0.02399999999999999
+      "average_forgetting": 0.02399999999999999,
+      "forward_transfer": 0.44557436617602575
     },
     {
       "name": "cable_lambda_bc1000_cw10_seed1",
       "average_performance": 0.86,
-      "average_forgetting": -0.0040000000000000036
+      "average_forgetting": -0.0040000000000000036,
+      "forward_transfer": 0.45232143584350215
     },
     {
       "name": "cable_lambda_bc1000_cw10_seed2",
       "average_performance": 0.9400000000000001,
-      "average_forgetting": -0.02799999999999998
+      "average_forgetting": -0.02799999999999998,
+      "forward_transfer": 0.5007913419113028
     },
     {
       "name": "cable_lambda_bc1000_cw10_seed3",
       "average_performance": 0.8960000000000001,
-      "average_forgetting": -0.072
+      "average_forgetting": -0.072,
+      "forward_transfer": 0.5099427283213518
     },
     {
       "name": "cable_lambda_bc1000_cw10_seed4",
       "average_performance": 0.9400000000000001,
-      "average_forgetting": 0.04399999999999995
+      "average_forgetting": 0.04399999999999995,
+      "forward_transfer": 0.7147280497013051
     },
     {
       "name": "cable_lambda_bc1000_cw10_seed5",
       "average_performance": 0.9199999999999999,
-      "average_forgetting": -0.03200000000000001
+      "average_forgetting": -0.03200000000000001,
+      "forward_transfer": 0.4800384619001802
     }
   ]
 }

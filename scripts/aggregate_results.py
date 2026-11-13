@@ -25,7 +25,9 @@ def main():
     reference = None
     if args.reference:
         b = json.loads(args.reference.read_text())
-        reference = {t:float(np.mean(c)) for t,c in zip(b['tasks'],b['stochastic_success_curves'],strict=True)}
+        if len(b['tasks']) != len(b['stochastic_success_curves']):
+            raise ValueError('Reference tasks and curves have different lengths.')
+        reference = {t:float(np.mean(c)) for t,c in zip(b['tasks'],b['stochastic_success_curves'])}
     groups = defaultdict(lambda:defaultdict(lambda:defaultdict(list)))
     run_results = []
     for item in json.loads((ROOT/'results/run_index.json').read_text()):
