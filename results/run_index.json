@@ -1573,5 +1573,50 @@
     "original_device": "cpu",
     "seed": 5,
     "original_run_name": "cable_lambda_bc1000_cw10_v3_v1_500k_seed5"
+  },
+  {
+    "group": "cable_lambda_bc10000",
+    "name": "cable_lambda_bc10000_cw10_seed1",
+    "config": "configs/archived/cable_lambda_bc10000/cable_lambda_bc10000_cw10_seed1.json",
+    "evaluations": "results/evaluations/cable_lambda_bc10000/cable_lambda_bc10000_cw10_seed1/evaluations.csv",
+    "original_device": "cpu",
+    "seed": 1,
+    "original_run_name": "cable_lambda_bc10000_cw10_v3_v1_500k_seed1"
+  },
+  {
+    "group": "cable_lambda_bc10000",
+    "name": "cable_lambda_bc10000_cw10_seed2",
+    "config": "configs/archived/cable_lambda_bc10000/cable_lambda_bc10000_cw10_seed2.json",
+    "evaluations": "results/evaluations/cable_lambda_bc10000/cable_lambda_bc10000_cw10_seed2/evaluations.csv",
+    "original_device": "cpu",
+    "seed": 2,
+    "original_run_name": "cable_lambda_bc10000_cw10_v3_v1_500k_seed2"
+  },
+  {
+    "group": "cable_lambda_bc10000",
+    "name": "cable_lambda_bc10000_cw10_seed3",
+    "config": "configs/archived/cable_lambda_bc10000/cable_lambda_bc10000_cw10_seed3.json",
+    "evaluations": "results/evaluations/cable_lambda_bc10000/cable_lambda_bc10000_cw10_seed3/evaluations.csv",
+    "original_device": "cpu",
+    "seed": 3,
+    "original_run_name": "cable_lambda_bc10000_cw10_v3_v1_500k_seed3"
+  },
+  {
+    "group": "cable_lambda_bc10000",
+    "name": "cable_lambda_bc10000_cw10_seed4",
+    "config": "configs/archived/cable_lambda_bc10000/cable_lambda_bc10000_cw10_seed4.json",
+    "evaluations": "results/evaluations/cable_lambda_bc10000/cable_lambda_bc10000_cw10_seed4/evaluations.csv",
+    "original_device": "cpu",
+    "seed": 4,
+    "original_run_name": "cable_lambda_bc10000_cw10_v3_v1_500k_seed4"
+  },
+  {
+    "group": "cable_lambda_bc10000",
+    "name": "cable_lambda_bc10000_cw10_seed5",
+    "config": "configs/archived/cable_lambda_bc10000/cable_lambda_bc10000_cw10_seed5.json",
+    "evaluations": "results/evaluations/cable_lambda_bc10000/cable_lambda_bc10000_cw10_seed5/evaluations.csv",
+    "original_device": "cpu",
+    "seed": 5,
+    "original_run_name": "cable_lambda_bc10000_cw10_v3_v1_500k_seed5"
   }
 ]

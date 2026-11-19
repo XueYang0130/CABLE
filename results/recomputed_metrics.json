@@ -280,6 +280,26 @@
         "high": 0.619459385371744,
         "n_seeds": 5
       }
+    },
+    "cable_lambda_bc10000": {
+      "average_performance": {
+        "mean": 0.8,
+        "low": 0.7424000000000002,
+        "high": 0.8392000000000002,
+        "n_seeds": 5
+      },
+      "average_forgetting": {
+        "mean": -0.008799999999999994,
+        "low": -0.036799999999999986,
+        "high": 0.022399999999999993,
+        "n_seeds": 5
+      },
+      "forward_transfer": {
+        "mean": 0.3536397190087505,
+        "low": 0.26160164221316695,
+        "high": 0.4376432431907505,
+        "n_seeds": 5
+      }
     }
   },
   "runs": [
@@ -1332,6 +1352,36 @@
       "average_performance": 0.9199999999999999,
       "average_forgetting": -0.03200000000000001,
       "forward_transfer": 0.4800384619001802
+    },
+    {
+      "name": "cable_lambda_bc10000_cw10_seed1",
+      "average_performance": 0.6759999999999999,
+      "average_forgetting": 0.008,
+      "forward_transfer": 0.14936605218059187
+    },
+    {
+      "name": "cable_lambda_bc10000_cw10_seed2",
+      "average_performance": 0.8280000000000001,
+      "average_forgetting": -0.043999999999999984,
+      "forward_transfer": 0.4701277903299478
+    },
+    {
+      "name": "cable_lambda_bc10000_cw10_seed3",
+      "average_performance": 0.812,
+      "average_forgetting": -0.05199999999999998,
+      "forward_transfer": 0.43468877378855664
+    },
+    {
+      "name": "cable_lambda_bc10000_cw10_seed4",
+      "average_performance": 0.8280000000000001,
+      "average_forgetting": 0.05599999999999997,
+      "forward_transfer": 0.28966053972131073
+    },
+    {
+      "name": "cable_lambda_bc10000_cw10_seed5",
+      "average_performance": 0.8560000000000001,
+      "average_forgetting": -0.011999999999999978,
+      "forward_transfer": 0.42435543902334566
     }
   ]
 }

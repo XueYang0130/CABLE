@@ -3,7 +3,7 @@
 ## Included
 
 - CABLE, four baselines, and paper ablation method presets.
-- Portable configurations and evaluation records for 175 reported continual runs.
+- Portable configurations and evaluation records for 180 reported continual runs.
 - Seed-level aggregation, pointwise bootstrap learning curves, and a fixed single-task SAC reference pooled over seeds 1--5.
 - Actual per-run optimizer and training settings, with model dimensions derived by the environment.
 - Source-file hashes tracing this release to the development implementation.
